@@ -1,0 +1,830 @@
+#other_Side_all_dark{
+	width: 1047px;
+	height: 550px;
+	overflow: auto;
+	float: right;
+	margin-right: 2px;
+	margin-left: 0px;
+    background-color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------ADD NEW BUTTON TO DISPLAY  THIS -------------------------------*/
+#other_Side_all_dark	#new_back{
+		position: fixed;
+		margin: 0px;
+		padding: 0px;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(222,222,222,0.2);
+		z-index: 5;
+		overflow-y: auto;
+		display: none;
+	}
+#other_Side_all_dark	#new_back #new{
+		height: 400px;
+		width: 870px;
+		background-color: #323232;
+		overflow: hidden;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+		display: block;
+		margin-top: 80px;
+		border-radius: 4px;
+	}
+#other_Side_all_dark	#new_back #new #menu_bar{
+		height: 35px;
+		width: 100%;
+	}
+#other_Side_all_dark	#new_back #new #menu_bar #close{
+		height: 80%;
+		width: 25px;
+		text-align: center;
+		float: right;
+		margin: 0px;
+		margin-right: 4px;
+		background: transparent;
+		color: #989696;
+		font-family: Calibri;
+		cursor: pointer;
+		font-size: 22px;
+	}
+#other_Side_all_dark	#new_back #new #menu_bar #close:hover{
+		color: #fff;
+	}
+#other_Side_all_dark	#new_back #new #menu_bar #title{
+		height: 80%;
+		width: 90%;
+		background-color: inherit;
+		overflow: hidden;
+		text-align: left;
+		font-family: Calibri;
+		font-size: 20px;
+		color: #dedede;
+		margin-top: 4px;
+	}
+#other_Side_all_dark	#new_back #new #record_holder{
+		height: 332px;
+		width: 100%;
+		background-color: #323232;
+		border-top: 2px solid #464646;
+		padding-top: 10px;
+	}
+
+
+#other_Side_all_dark	#new_back #new #record_holder .new_Staff{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: right;
+		margin-top: 20px;
+		margin-right: 20px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Staff:hover{
+		background-color: #454444;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_costomers{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: right;
+		margin-top: 20px;
+		margin-right: 60px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_costomers:hover{
+		background-color: #454444;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_stalk{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: left;
+		margin-top: 20px;
+		margin-left: 20px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_stalk:hover{
+		background-color: #454444;
+	}
+
+
+#other_Side_all_dark	#new_back #new #record_holder .new_Branch{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: right;
+		margin-top: 65px;
+		margin-right: 20px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Branch:hover{
+		background-color: #454444;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Item{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: right;
+		margin-top: 65px;
+		margin-right: 60px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Item:hover{
+		background-color: #454444;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Item_Price{
+		height: 60px;
+		width: 230px;
+		background-color: transparent;
+		color: #ababab;
+		font-size: 20px;
+		font-family: Calibri;
+		font-weight: bold;
+		padding-top: 10px;
+		float: left;
+		margin-top: 65px;
+		margin-left: 20px;
+		text-align: left;
+		cursor: pointer;
+	}
+#other_Side_all_dark	#new_back #new #record_holder .new_Item_Price:hover{
+		background-color: #454444;
+	}
+
+
+
+
+
+
+
+
+
+
+
+#other_Side_all_dark #theme_back{
+		position: fixed;
+		margin: 0px;
+		padding: 0px;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(222,222,222,0.2);
+		z-index: 5;
+		overflow-y: auto;
+		display: none;
+	}
+	#other_Side_all_dark #theme{
+		height: 370px;
+		width: 600px;
+		background-color: #323232;
+		overflow: hidden;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+		display: block;
+		margin-top: 80px;
+		border-radius: 4px;
+	}
+	#other_Side_all_dark #theme #menu_bar{
+		height: 35px;
+		width: 100%;
+	}
+	#other_Side_all_dark #theme #menu_bar #close{
+		height: 80%;
+		width: 25px;
+		text-align: center;
+		float: right;
+		margin: 0px;
+		margin-right: 4px;
+		background: transparent;
+		color: #e5e4df;
+		font-family: Calibri;
+		cursor: pointer;
+		font-size: 22px;
+	}
+	#other_Side_all_dark #theme #menu_bar #close:hover{
+		color: #646464;
+	}
+	#other_Side_all_dark #theme #menu_bar #title{
+		height: 80%;
+		width: 90%;
+		background-color: inherit;
+		overflow: hidden;
+		text-align: left;
+		font-family: Calibri;
+		font-size: 20px;
+		color: #e5e4df;
+		margin-top: 4px;
+	}
+	#other_Side_all_dark #theme #record_holder{
+		height: 350px;
+		width: 100%;
+		background-color: #323232;
+		border-top: 2px solid #646464;
+		padding-top: 10px;
+	}
+
+	#other_Side_all_dark #theme #record_holder .theme_to_select{
+		margin: 5px;
+		width: 200px;
+		border: 2px solid #323232;
+	}
+	#other_Side_all_dark #theme #record_holder .theme_to_select:hover{
+		border: 2px solid #646464;
+		margin: 5px;
+	}
+
+
+
+
+
+
+
+
+	/*-----------------------------HOME CUSTOMER  BUTTON TO DISPLAY  THIS -------------------------------*/
+ #other_Side_all_dark .customer_list_back{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 5;
+    overflow-y: auto;
+    display: none;
+  }
+
+
+ #other_Side_all_dark #customer_list_back{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 5;
+    overflow-y: auto;
+    display: none;
+  }
+
+
+ #other_Side_all_dark  #customer_list{
+    height: 500px;
+    width: 420px;
+    background-color: #323232;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    display: block;
+    margin-top: 80px;
+    border-radius: 4px;
+  }
+  #other_Side_all_dark #customer_list #menu_bar{
+    height: 35px;
+    width: 100%;
+  }
+  #other_Side_all_dark #customer_list #menu_bar #close{
+    height: 80%;
+    width: 25px;
+    text-align: center;
+    float: right;
+    margin: 0px;
+    margin-right: 4px;
+    background: transparent;
+    color: #e5e4df;
+    font-family: Calibri;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  #other_Side_all_dark  #customer_list #menu_bar #close:hover{
+    color: #646464;
+  }
+  #other_Side_all_dark  #customer_list #menu_bar #title{
+    height: 80%;
+    width: 90%;
+    background-color: inherit;
+    overflow: hidden;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 20px;
+    color: #e5e4df;
+    margin-top: 4px;
+  }
+  #other_Side_all_dark  #customer_list #record_holder{
+    height: 420px;
+    width: 100%;
+    background-color: #323232;
+    border-top: 1px solid #e5e4df;
+    padding-top: 10px;
+    overflow: auto;
+  }
+
+#other_Side_all_dark  #customer_list input[type='submit']{
+	font-size: 12px;
+	color: #fff;
+	background-color: #646464;
+	height: 30px;
+	border-radius: 5px;
+	border: 0px;
+	margin-top: 10px;
+}
+#other_Side_all_dark  #customer_list input[type='submit']:hover{
+	background-color: #575757;
+}
+
+
+
+
+
+/*-----------------------------CCUSTOMER SETTLE DEBT TO DISPLAY  THIS -------------------------------*/
+#other_Side_all_dark  #settleDept_list_back{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(222,222,222,0.2);
+    z-index: 5;
+    overflow-y: auto;
+    display: none;
+  }
+#other_Side_all_dark  #settleDept_list{
+    height: 270px;
+    width: 350px;
+    background-color: #323232;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    display: block;
+    margin-top: 80px;
+    border-radius: 4px;
+    padding: 0px;
+  }
+#other_Side_all_dark  #settleDept_list #menu_bar{
+    height: 35px;
+    width: 100%;
+    background-color: #323232;
+    margin-top: -5px;
+  }
+ #other_Side_all_dark #settleDept_list #menu_bar #close{
+    height: 80%;
+    width: 25px;
+    text-align: center;
+    float: right;
+    margin: 0px;
+    margin-right: 4px;
+    background: transparent;
+    color: #e5e4df;
+    font-family: Calibri;
+    cursor: pointer;
+    font-size: 22px;
+  }
+ #other_Side_all_dark  #settleDept_list #menu_bar #close:hover{
+    color: #646464;
+  }
+#other_Side_all_dark   #settleDept_list #menu_bar #title{
+    height: 80%;
+    width: 90%;
+    background-color: inherit;
+    overflow: hidden;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 16px;
+    color: #e5e4df;
+    margin-top: 4px;
+    font-weight: bolder;
+    padding-top: 6px;
+    padding-left: 5px;
+  }
+ #other_Side_all_dark  #settleDept_list #record_holder{
+    height: 200px;
+    width: 100%;
+    background-color: #323232;
+    border-top: 1px solid #413f3f;
+    padding-top: 10px;
+    overflow: auto;
+    color: #e5e4df;
+  }
+
+#other_Side_all_dark #settleDept_list input[type='submit']{
+    font-size: 12px;
+    color: #fff;
+    background-color: #646464;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#other_Side_all_dark #settleDept_list input[type='submit']:hover{
+    background-color: #575757;
+}
+
+
+#other_Side_all_dark #settleDept_list input[type='text'],#other_Side_all_dark #settleDept_list select{
+	height: 40px;
+	width: 80%;
+	border: 0px solid #676767;
+	border-radius: 5px;
+	background-color: #464646;
+	padding-left: 15px;
+	font-size: 16px;
+	font-family: sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    color: #9f9d9d;
+}
+#other_Side_all_dark #settleDept_list input[type='text']:hover,#other_Side_all_dark #settleDept_list select:hover{
+	background-color: rgba(100,100,100,0.8);
+}
+#other_Side_all_dark #settleDept_list input[type='text']:focus,#other_Side_all_dark #settleDept_list select:focus{
+	background-color: transparent;
+    border: 1px solid #86857b;
+}
+
+
+
+   /*-----------------------------CUSTOMER STATUS UPDATE TO DISPLAY  THIS -------------------------------*/
+#other_Side_all_dark .status_updating_back2{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(222,222,222,0.2);
+    z-index: 5;
+    overflow-y: auto;
+    display: none;
+  }
+
+  #other_Side_all_dark #status_updating_back,#other_Side_all_dark #status_updating_back2{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 5;
+    overflow-y: auto;
+    display: none;
+  }
+
+ #other_Side_all_dark #status_updating, #other_Side_all_dark #status_updating2{
+    height: 190px;
+    width: 485px;
+    background-color: #323232;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    display: block;
+    margin-top:240px;
+    border-radius: 4px;
+    padding: 0px;
+  }
+ #other_Side_all_dark #status_updating #menu_bar{
+    height: 35px;
+    width: 100%;
+    background-color: #323232;
+    margin-top: -5px;
+  }
+ #other_Side_all_dark #status_updating #menu_bar #close{
+    height: 80%;
+    width: 25px;
+    text-align: center;
+    float: right;
+    margin: 0px;
+    margin-right: 4px;
+    background: transparent;
+    color: #e5e4df;
+    font-family: Calibri;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  #other_Side_all_dark #status_updating #menu_bar #close:hover{
+    color: #646464;
+  }
+  #other_Side_all_dark #status_updating #menu_bar #title{
+    height: 80%;
+    width: 90%;
+    background-color: inherit;
+    overflow: hidden;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 16px;
+    color: #e5e4df;
+    margin-top: 4px;
+    font-weight: bolder;
+    padding-top: 6px;
+    padding-left: 5px;
+  }
+  #other_Side_all_dark #status_updating #record_holder{
+    height: 140px;
+    width: 100%;
+    background-color: #323232;
+    border-top: 1px solid #413f3f;
+    padding-top: 10px;
+    overflow: hidden;
+    color: #e5e4df;
+  }
+
+#other_Side_all_dark #status_updating input[type='submit']{
+    font-size: 12px;
+    color: #fff;
+    background-color: #03b9b9;
+    border-radius: 5px;
+    border:none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#other_Side_all_dark #status_updating input[type='submit']:hover{
+    background-color: #73cccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   /*-----------------------------New accunt with custmer SETTLE TO DISPLAY  THIS -------------------------------*/
+        #other_Side_all_dark .cnfirm_Invent_reached_back{
+            position: fixed;
+            margin: 0px;
+            padding: 0px;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(222,222,222,0.2);
+            z-index: 5;
+            overflow-y: auto;
+            display: none;
+          }
+
+
+
+
+  #other_Side_all_dark #accnt_with_custmer_back{
+            position: fixed;
+            margin: 0px;
+            padding: 0px;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 5;
+            overflow-y: auto;
+            display: none;
+          }
+        #other_Side_all_dark  #accnt_with_custmer{
+            height: 270px;
+            width: 850px;
+            background-color: #323232;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            display: block;
+            margin-top:100px;
+            border-radius: 4px;
+            padding: 0px;
+          }
+        #other_Side_all_dark  #accnt_with_custmer #menu_bar{
+            height: 35px;
+            width: 100%;
+            background-color: #323232;
+            margin-top: -5px;
+          }
+         #other_Side_all_dark #accnt_with_custmer #menu_bar #close{
+            height: 80%;
+            width: 25px;
+            text-align: center;
+            float: right;
+            margin: 0px;
+            margin-right: 4px;
+            background: transparent;
+            color: #eaeaea;
+            font-family: Calibri;
+            cursor: pointer;
+            font-size: 22px;
+          }
+        #other_Side_all_dark   #accnt_with_custmer #menu_bar #close:hover{
+            color: #646464;
+          }
+         #other_Side_all_dark  #accnt_with_custmer #menu_bar #title{
+            height: 80%;
+            width: 90%;
+            background-color: inherit;
+            overflow: hidden;
+            text-align: left;
+            font-family: Calibri;
+            font-size: 16px;
+            color: #eaeaea;
+            margin-top: 4px;
+            font-weight: bolder;
+            padding-top: 6px;
+            padding-left: 5px;
+          }
+        #other_Side_all_dark   #accnt_with_custmer #record_holder{
+            height: 205px;
+            width: 100%;
+            background-color: #323232;
+            border-top: 2px solid #413f3f;
+            padding-top: 10px;
+            overflow: auto;
+             color: #e5e4df;
+          }
+
+        
+       #other_Side_all_dark #accnt_with_custmer input[type='submit']{
+            font-size: 16px;
+            color: #fff;
+            background-color: #646464;
+            border-radius: 5px;
+            border:none;
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 15px;
+        }
+       #other_Side_all_dark #accnt_with_custmer input[type='submit']:hover{
+            background-color: #575757;
+        }
+
+
+        #other_Side_all_dark #accnt_with_custmer input[type='text'], #accnt_with_custmer input[type='date'], #accnt_with_custmer select {
+            width: 130px;
+            height: 40px;
+            text-align: center;
+            border: 0px solid #676767;
+            background-color: #464646;
+            font-family: sans-serif;
+            color: #9f9d9d;
+            font-size: 16px;
+            padding: 0px;
+            margin: 0px;
+            margin-top: 40px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*-----------------------------SALES AND SUPPLIES CHOOSE NEW OR EXISTING TO DISPLAY  THIS -------------------------------*/
+         #other_Side_all_dark .neworExistSS_back{
+            position: fixed;
+            margin: 0px;
+            padding: 0px;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(222,222,222,0.2);
+            z-index: 5;
+            overflow-y: auto;
+            display: none;
+          }
+          #other_Side_all_dark #neworExistSS{
+            height: 270px;
+            width: 350px;
+            background-color: #323232;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            display: block;
+            margin-top:100px;
+            border-radius: 4px;
+            padding: 0px;
+          }
+          #other_Side_all_dark #neworExistSS #menu_bar{
+            height: 35px;
+            width: 100%;
+            background-color: #323232;
+            margin-top: -5px;
+          }
+          #other_Side_all_dark #neworExistSS #menu_bar #close{
+            height: 80%;
+            width: 25px;
+            text-align: center;
+            float: right;
+            margin: 0px;
+            margin-right: 4px;
+            background: transparent;
+            color: #eaeaea;
+            font-family: Calibri;
+            cursor: pointer;
+            font-size: 22px;
+          }
+           #other_Side_all_dark #neworExistSS #menu_bar #close:hover{
+            color: #646464;
+          }
+           #other_Side_all_dark #neworExistSS #menu_bar #title{
+            height: 80%;
+            width: 90%;
+            background-color: inherit;
+            overflow: hidden;
+            text-align: left;
+            font-family: Calibri;
+            font-size: 16px;
+            color: #eaeaea;
+            margin-top: 4px;
+            font-weight: bolder;
+            padding-top: 6px;
+            padding-left: 5px;
+          }
+           #other_Side_all_dark #neworExistSS #record_holder{
+            height: 195px;
+            width: 100%;
+            background-color: #323232;
+            border-top: 2px solid #646464;
+            padding-top: 10px;
+            overflow: auto;
+            color: #e5e4df;
+          }
+
+
+#other_Side_all_dark #neworExistSS  #UL{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        width: 320px;
+        overflow: auto;
+    }
+    #other_Side_all_dark #neworExistSS  #UL li a{
+        border: 1px solid #646464;
+        margin-top: -1px;
+        background-color:transparent;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #646464;
+        display: block;
+    }
+    #other_Side_all_dark #neworExistSS  #UL li a:hover:not(.header){
+        background-color: #3c3c3c;
+    }

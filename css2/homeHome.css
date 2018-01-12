@@ -1,0 +1,45 @@
+#other_Side_all_dark #homeHome_bigDiv{
+	width: 90%;
+	height: 520px;
+}
+
+#other_Side_all_dark #homeHome_bigDiv #smDiv{
+	width: 25%;
+	height: 200px;
+	background-color: #3c3c3c;
+	margin: 35px;
+	cursor: pointer;
+}
+
+#other_Side_all_dark #homeHome_bigDiv #smDiv div{
+	width: 80%;
+	height: 160px;
+	background-color: #646464;
+	margin: auto;
+	margin-top: 20px;
+	color: #3c3c3c;
+	text-align: center;
+	font-size: 30px;
+	font-family: Lucida Fax;
+	padding-top: 10px;
+}
+
+#other_Side_all_dark #homeHome_bigDiv #smDiv:hover{
+	background-color: #646464;
+	color: 
+}
+
+#other_Side_all_dark #homeHome_bigDiv #smDiv:hover > div{
+	background-color: #3c3c3c;
+	color: #e9f3f5;
+}
+#other_Side_all_dark #homeHome_bigDiv .smDiv3{
+	float: right;
+}
+#other_Side_all_dark #homeHome_bigDiv .smDiv2{
+	float: right;
+}
+
+#other_Side_all_dark #homeHome_bigDiv .smDiv1{
+	float: left;
+}

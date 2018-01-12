@@ -1,0 +1,267 @@
+#body2{
+	margin: 0px;
+	padding: 0px;
+	font-family: Open sans, sans-serif, Arial, Times New Roman, 'Lato', Calibri;
+	line-height: 1;
+	min-width: 1350px;
+	overflow: auto;
+	background-color: #333333;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select{
+	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+#other_Side_all_dark #addNew input[type='text'],#other_Side_all_dark #addNew input[type='email'],#other_Side_all_dark #addNew input[type='date'], #other_Side_all_dark #addNew input[type='number'],#other_Side_all_dark #addNew select{
+	height: 40px;
+	width: 40%;
+	border: 0px solid #676767;
+	border-radius: 5px;
+	background-color: #464646;
+	padding-left: 15px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #9f9d9d;
+}
+#other_Side_all_dark #addNew input[type='text']:hover,#other_Side_all_dark #addNew input[type='email']:hover,#other_Side_all_dark #addNew input[type='date']:hover,#other_Side_all_dark #addNew input[type='number']:hover, #other_Side_all_dark #addNew select:hover{
+	background-color: rgba(100,100,100,0.8);
+}
+#other_Side_all_dark #addNew input[type='text']:focus,#other_Side_all_dark #addNew input[type='email']:focus,#other_Side_all_dark #addNew input[type='date']:focus,#other_Side_all_dark #addNew input[type='number']:focus, #other_Side_all_dark #addNew select:focus{
+	background-color: transparent;
+	border: 1px solid #86857b;
+}
+
+#other_Side_all_dark #addNew input[type='submit']{
+	font-size: 20px;
+	color: #fff;
+	background-color: #646464;
+	height: 45px;
+	width: 150px;
+	border-radius: 5px;
+	border: 0px;
+	margin-top: 15px;
+}
+#other_Side_all_dark #addNew input[type='submit']:hover{
+	background-color: #575757;
+	color: #9f9d9d;
+}
+
+
+#other_Side_all_dark #successResponse{
+	width: 280px;
+	height: 370px;
+	text-align: center;
+	padding: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,1);
+	background: #3f65b7;
+	background-clip: padding-box;
+	border: 1px solid #646464;
+	border-bottom-color: #646464;
+	border-radius: 5px;
+	background-image: -webkit-radial-gradient(cover, #b6b3b3, #646464);
+	background-image: -moz-radial-gradient(cover, #b6b3b3, #646464);
+	background-image: -o-radial-gradient(cover, #b6b3b3, #646464);
+	background-image: radial-gradient(cover, #b6b3b3, #646464);
+	-webkit-box-shadow: inset 0 1px rgba(205, 205, 205, 0.3), inset 0 0 1px 1px rgba(205, 205, 205, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 1px rgba(205, 205, 205, 0.3), inset 0 0 1px 1px rgba(205, 205, 205, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-top: 80px;
+}
+
+
+
+#other_Side_all_dark  #myUL{
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		width: 320px;
+		overflow: auto;
+	}
+	#other_Side_all_dark  #myUL li a{
+		border: 1px solid #646464;
+		margin-top: -1px;
+		background-color: transparent;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #646464;
+		display: block;
+	}
+	#other_Side_all_dark  #myUL li a:hover:not(.header){
+		background-color: #3c3c3c;
+	}
+
+
+
+#other_Side_all_dark  #myUL2{
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		width: 320px;
+		overflow: auto;
+	}
+	#other_Side_all_dark  #myUL2 li a{
+		border: 1px solid #646464;
+		margin-top: -1px;
+		background-color: transparent;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #646464;
+		display: block;
+	}
+	#other_Side_all_dark  #myUL2 li a:hover:not(.header){
+		background-color: #3c3c3c;
+	}
+
+#other_Side_all_dark #myInput2{
+	border: 1px solid #676767;
+	background-color: #464646;
+	padding-left: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #9f9d9d;
+	height: 25px;
+}
+#other_Side_all_dark #myInput2 input[type='text']:hover{
+	background-color: rgba(100,100,100,0.8);
+}
+#other_Side_all_dark #myInput2 input[type='text']:focus{
+	background-color: transparent;
+	border: 1px solid #86857b;
+}
+
+
+
+
+#other_Side_all_dark #myInput{
+	border: 1px solid #676767;
+	background-color: #464646;
+	padding-left: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #9f9d9d;
+	height: 25px;
+}
+#other_Side_all_dark #myInput input[type='text']:hover{
+	background-color: rgba(100,100,100,0.8);
+}
+#other_Side_all_dark #myInput input[type='text']:focus{
+	background-color: transparent;
+	border: 1px solid #86857b;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------       Print List       ---------------------------------------*/
+.printList{
+        max-width:90%;
+        margin:auto;
+        padding:30px;
+        border:1px solid #eee;
+        box-shadow:0 0 10px rgba(0, 0, 0, .15);
+        font-size:16px;
+        line-height:24px;
+        font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color:#555;
+        background-image: url(../images/crest_trans.png);
+        background-size: 60% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 2%;
+    }
+    
+    .printList table{
+        width:100%;
+        line-height:inherit;
+        text-align:left;
+    }
+    
+    .printList table td{
+        padding:5px;
+        vertical-align:top;
+    }
+    
+    .printList table tr td:nth-child(2){
+        text-align:right;
+    }
+    
+    .printList table tr.top table td{
+        padding-bottom:20px;
+    }
+    
+    .printList table tr.top table td.title{
+        font-size:45px;
+        line-height:30px;
+        color:#333;
+    }
+    
+    .printList table tr.information table td{
+        padding-bottom:20px;
+    }
+    
+    .printList table tr.heading td{
+        background:#eee;
+        border-bottom:1px solid #ddd;
+        font-weight:bold;
+    }
+    
+    .printList table tr.details td{
+        padding-bottom:20px;
+    }
+    
+    .printList table tr.item td{
+        border-bottom:1px solid #eee;
+    }
+    
+    .printList table tr.item.last td{
+        border-bottom:none;
+    }
+    
+    .printList table tr.total td:nth-child(2){
+        border-top:2px solid #eee;
+        font-weight:bold;
+    }
+
+   #buttonPrint{
+      background-color: #3cb9b9; height: 5%; width: 10%; color: #fff; font-size: 16px; font-weight: bold; margin-top: 2%;
+      float: right; margin-right: 10%;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .printList table tr.top table td{
+            width:100%;
+            display:block;
+            text-align:center;
+        }
+        
+        .printList table tr.information table td{
+            width:100%;
+            display:block;
+            text-align:center;
+        }
+    }
+@media print {
+	body{
+		-webkit-print-color-adjust: exact;
+		-moz-print-color-adjust: exact;
+	}
+
+}
+
+

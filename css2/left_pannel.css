@@ -1,0 +1,33 @@
+#left_pannel_all2{
+	background-color: #333333;
+	width: 300px;
+	height: 550px;
+	overflow-y: auto;
+	box-shadow: 1px 0px 10px rgba(0,0,0,0.3);
+	margin-right: 0px;
+}
+
+
+
+
+#left_pannel_all2  #myUL{
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		width: 100%;
+		overflow: auto;
+	}
+	#left_pannel_all2  #myUL li a{
+		margin-top: -1px;
+		background-color: transparent;
+		border-bottom: 1px solid #646464;
+		padding: 10px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #646464;
+		display: block;
+		
+	}
+	#left_pannel_all2  #myUL li a:hover:not(.header){
+		background-color: #3c3c3c;
+	}
