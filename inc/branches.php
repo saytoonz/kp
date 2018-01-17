@@ -73,7 +73,7 @@ $query = mysql_query("SELECT * FROM braches WHERE active='yes'");
 		                <div id=\"record_holder\">
 				<form action=\"#\" method=\"POST\">
 
-		                <input type='text' name='BranchName' placeholder='Branch Name' value=\"$branchName\"   style=\"text-align: left; width: 270px;\" required=\"required\"><input type='text' name='Location' value=\"$Location\"  placeholder='Location'  style=\"text-align: left; width: 270px;\" required=\"required\"><input type='text' name='Contact' value=\"$Contact\"  placeholder='Contact'  style=\"text-align: left; width: 270px;\" required=\"required\">
+		                <input type='text' name='BranchName' placeholder='Branch Name' value=\"$branchName\"   style=\"text-align: left; width: 270px;\" required=\"required\"><input type='text' name='Location' value=\"$Location\"  placeholder='Location'  style=\"text-align: left; width: 270px;\" required=\"required\"><input type='text' name='Contact' value=\"$Contact\"  placeholder='Contact'  style=\"text-align: left; width: 270px;\">
 		                <br><br>
 		                    <input type=\"submit\" name=\"EditConfirm$id\" value=\"Confirm\">
 				</form>

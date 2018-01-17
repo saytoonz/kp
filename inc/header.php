@@ -143,8 +143,6 @@
 	
  ?>
 
-<div >
-
 <body id="<?php echo "$body" ?>" onload="getTime()">
 	<div id="nav_all">
 

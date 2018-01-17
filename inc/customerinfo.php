@@ -73,7 +73,8 @@ elseif (strpos($Get, "customerinfoViewInfo")!==false) {
                     <table>
                         <tr>
                             <td class=\"title\">
-                                <img src=\"images/KOCLLOGO.png\" style=\"width:120%; max-width:120px; margin-bottom: -40px;\">
+                                <img src=\"images/KOCLLOGO.png\" style=\"width:350px; max-width:120px; margin-bottom: 30px;\">
+                                
                             </td>
                             
                             <td>
@@ -146,15 +147,22 @@ elseif (strpos($Get, "customerinfoViewInfo")!==false) {
                     $tel
                 </td>
             </tr>
-            
-            
-            <tr>
-              <td><b style=\"font-weight:bolder;\">Signature:..............................................</b></td>
-              <td></td>
-            </tr>
-        </table>
-    </div>
 
+            
+            <tr class=\"item\">
+                <td>
+                    Address
+                </td>
+                
+                <td>
+                    $address
+                </td>
+            </tr>
+            
+        </table>
+        <br><br>
+            <h6 style=\"text-align: center; font-decoration: italic;\" >Designed and Managed <span style=\"color:#ff0000;\">Nsromapa</span></h6>
+    </div>
       </div>
       <div id=\"editor\"></div>
         <button onclick=\"printDiv(content)\" id=\"buttonPrint\">Print</button>

@@ -8,12 +8,17 @@ CREATE TABLE `braches` (
   `date_added` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 INSERT INTO `braches` (`id`, `branchName`, `Location`, `Contact`, `date_added`, `active`) VALUES
-(1, 'AFRANCHO', 'AFRANCHO KSI', '0240066322', '16th December, 2017', 'yes'),
-(2, 'PANKRONO', 'PANKRONO', '024006632', '16th December, 2017', 'yes'),
-(3, 'FUMESUA', 'FUMESUA-KSI', '249456789', '7th January, 2018', 'yes');
+(1, 'FUMESUA', 'FUMESUA', '', '17th January, 2018', 'yes'),
+(2, 'CEMENT HOUSE', 'ADUM', '', '17th January, 2018', 'yes'),
+(3, 'PANKRONO', 'PANKRONO', '', '17th January, 2018', 'yes'),
+(4, 'NHYIAESO', 'NHYIAESO', '', '17th January, 2018', 'yes'),
+(5, 'AFRANCHO', 'AFRANCHO', '', '17th January, 2018', 'yes'),
+(6, 'NEW ROAD', 'NEW ROAD', '', '17th January, 2018', 'yes'),
+(7, 'HEAD OFFICE', 'MAGAZINE', '', '17th January, 2018', 'yes'),
+(8, 'KOFORIDUA', 'ATWIMA', '', '17th January, 2018', 'yes');
 
 -- Table `branchitems` --
 CREATE TABLE `branchitems` (
@@ -28,14 +33,53 @@ CREATE TABLE `branchitems` (
   `lastupdate` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
 INSERT INTO `branchitems` (`id`, `branch`, `itemid`, `totalqtyReceives`, `quantity`, `itemPrice`, `tAmt`, `date_added`, `lastupdate`, `active`) VALUES
-(1, 3, '1', '850', '250', '21', '2100', '2018-01-06 23:51:02', '2018-01-07', 'yes'),
-(2, 1, '1', '500', '87', '21', '0', '2018-01-06 23:53:25', '2018-01-07', 'yes'),
-(3, 2, '1', '4', '4', '21', '', '2018-01-07 00:15:21', '', 'yes'),
-(4, 1, '2', '500', '500', '21', '', '2018-01-08 16:51:09', '2018-01-08', 'yes'),
-(5, 1, '6', '1000', '800', '27', '2700', '2018-01-09 22:11:13', '2018-01-09', 'yes');
+(1, 2, '3', '25', '25', '4', '100', '2018-01-17 00:03:00', '2017-12-31', 'yes'),
+(2, 1, '5', '2283', '2283', '5.50', '12556.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(3, 2, '5', '1484', '1484', '5.50', '8162', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(4, 4, '5', '1137', '1137', '5.50', '6253.50', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(5, 7, '5', '6618', '6618', '5.50', '36399', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(6, 6, '7', '344', '344', '13.00', '4472.00', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(7, 1, '9', '89', '89', '14.5', '1290.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(8, 2, '9', '1479', '1479', '14.5', '21445.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(9, 6, '9', '672', '672', '14.5', '9744', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(10, 8, '9', '582', '582', '14.5', '8439', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(11, 1, '11', '3700', '3700', '17.5', '64750', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(12, 2, '11', '3332', '3332', '17.5', '58310', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(13, 4, '11', '1067', '1067', '17.5', '18672.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(14, 6, '11', '2028', '2028', '17.5', '35490', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(15, 8, '11', '1864', '1864', '17.5', '32620', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(16, 2, '1', '312', '312', '29.5', '9204', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(17, 2, '2', '294', '294', '27.5', '8085', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(18, 8, '2', '10', '10', '27.5', '275', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(19, 8, '6', '10', '10', '30.50', '305', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(20, 2, '10', '76', '76', '26.5', '2014', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(21, 8, '12', '22', '22', '28', '616', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(22, 4, '17', '1004', '1004', '25.50', '25602', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(23, 4, '19', '785', '785', '29.5', '23157.50', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(24, 4, '21', '138', '138', '43', '5934', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(25, 4, '23', '653', '653', '70', '45710', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(26, 4, '24', '314', '314', '106', '33284', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(27, 1, '14', '1110', '1110', '21', '23310', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(28, 2, '14', '2664', '2664', '21', '55944', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(29, 4, '14', '604', '604', '21', '12684', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(30, 6, '14', '626', '626', '21', '13146', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(31, 8, '14', '1598', '1598', '21', '33558', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(32, 1, '15', '844', '844', '27.5', '23210', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(33, 2, '15', '3590', '3590', '27.5', '98725', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(34, 4, '15', '354', '354', '27.5', '9735', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(35, 6, '15', '869', '869', '27.5', '23897.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(36, 8, '15', '404', '404', '27.5', '11110', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(37, 1, '16', '1211', '1211', '37.5', '45412.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(38, 2, '16', '2626', '2626', '37.5', '98475', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(39, 4, '16', '1078', '1078', '37.5', '40425', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(40, 6, '16', '978', '978', '37.5', '36675', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(41, 8, '16', '453', '453', '37.5', '16987.5', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(42, 4, '18', '30', '30', '53', '1590', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(43, 4, '20', '145', '145', '60', '8700', '2018-01-17 00:06:35', '2017-12-31', 'yes'),
+(44, 4, '22', '167', '167', '150', '25050', '2018-01-17 00:06:35', '2017-12-31', 'yes');
 
 -- Table `customerinfo` --
 CREATE TABLE `customerinfo` (
@@ -49,13 +93,185 @@ CREATE TABLE `customerinfo` (
   `debt` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=177 DEFAULT CHARSET=latin1;
 
 INSERT INTO `customerinfo` (`id`, `Customername`, `Companyname`, `mobile`, `tel`, `address`, `Folio`, `debt`, `active`) VALUES
-(1, 'Samuel Annin Yeboah', 'Nsromapa', '0240066392', '0559685442', 'Gso', '123/332e', '4600', 'yes'),
-(2, 'Samuel Annin Yeboah', 'Microsoft', '1234567800', '', '', '', '0', 'yes'),
-(3, 'Godson Oheneba Dac', 'Nsromapa', '0549507279', '', 'Goaso', '21901', '', 'yes'),
-(4, 'G K BOAKYE', 'GK BOAKYE COMPANY LMT', '0244565656', '', 'GOASO ABOTANSO', 'D123/1', '4242', 'yes');
+(1, 'KESSBEN', 'KESSBEN GROUP OF CO.', '0248469641', '0205110001', '', '0261/12', '', 'yes'),
+(2, 'MAAME BUCKMAN', 'MAAME BUCKMAN ENT', '0242-32 97 95', '', '', '', '', 'yes'),
+(3, 'REV ', 'REV OSEI BONSU', '0244209135', '', 'ATWIMA DENCHEMOUSO', '0371/15', '', 'no'),
+(4, ' MAAME BIRAGO', 'MAAME BIRAGO ENT', '0', '', '', '', '', 'yes'),
+(5, 'FRANK ACHEAMPONG', 'FRANK ACHEAMPONG', '0208 59 10 94', '', '', '219/17', '', 'yes'),
+(6, 'DA-JAK', 'DA-JAK', '0201211201', '', '', '', '', 'yes'),
+(7, 'MOGPA', 'MOGPA PROJECTS', '0276159760', '0200775150', '', '585/13', '', 'yes'),
+(8, 'ADWOA MANCO', 'ADWOA MANCO ENT-MEDOMA', '0243 63 86 84', '', '', '201/17', '', 'yes'),
+(9, 'BROAD MEDIA', 'BROAD MEDIA CO.LTD.', '0244235319', '', 'AYEDUASI', '0008/13', '', 'yes'),
+(10, 'ADOM SUPER BLOCKS', 'ADOM SUPER BLOCKS', '05129911', '0208114204', '', '0123/08', '', 'yes'),
+(11, 'SOFO OWUSU', 'SOFO OWUSU-DOTIE SEPE', '0244 46 38 49', '', '', '468/15', '', 'yes'),
+(12, 'BAMOAK ', 'BAMOAK LTD', '0246 92 71 67', '', '', '225/17', '', 'yes'),
+(13, ' TEPA', ' TEPA TRADITIONAL COUNCIL', '0', '', ' TEPA', '0016/13', '', 'yes'),
+(14, 'FRANK KONADU SARPONG', 'FRANK KONADU SARPONG', '0244 020 965', '', '', '225/17', '', 'yes'),
+(15, ' MINSI FORDJOUR', ' MINSI FORDJOUR ENT', '0', '', '', '', '', 'yes'),
+(16, 'MARIPOMA LTD', 'MARIPOMA LTD-KUMASI', '0208423746', '0244563173', 'KUMASI', '0276/06', '', 'yes'),
+(17, 'CHAMAGS', 'CHAMAGS CONSTRUCTION-WA ', '0244512300', '', 'WA ', '0185/06', '', 'yes'),
+(18, 'SARPOD REAL ESTATE', 'DO-DAVE', '0244-461797', '0244388258', 'ADUM', '607/07', '', 'yes'),
+(19, 'PETER AGYAPONG', 'PETER AGYAPONG-OHWIM', '0205142187', '', '', '212/17', '', 'yes'),
+(20, 'WOFA ATTA', 'WOFA ATTA -TANOSO', '0', '', '', '222/17', '', 'yes'),
+(21, 'PRINCESS CHARITY ', 'PRINCESS C. PROJECTS-APT', '0', '', '', '216/17', '', 'yes'),
+(22, 'MYTURN', 'MYTURN LTD. BOLGA', '0244361400', '0202112332', 'BOLGA', '0422/07', '', 'yes'),
+(23, 'GEORGE BAWUAH', 'GEORGE BAWUAH-BUOKROM', '0242 74 64 32', '', 'BUOKROM', '', '', 'yes'),
+(24, 'REV. DAVID ESHUN', ' LIGHT HOUSE CHAPEL INT', '054734 11 95', '', 'EJURA', '0038/13', '', 'yes'),
+(25, 'MR. BOADI', 'BOADI ENT', '0', '', 'ATIMATIM MAASE', '', '', 'yes'),
+(26, ' ASKOFF', ' ASKOFF ENT.', '0242946668', '', '', '0196/08', '', 'yes'),
+(27, 'GOD FIRST ', 'GOD FIRST VENTURES', '0208356893', '0547221693', 'TANOSO', '', '', 'yes'),
+(28, ' BARBISOTTI', ' BARBISOTTI & SONS LTD ', '0', '', '', '', '', 'yes'),
+(29, 'GIG TRIO GHANA', 'GIG TRIO GHANA LTD', '0244497845', '', 'SOFOLINE', '', '', 'yes'),
+(30, 'PW GHANA LTD', 'PW GHANA LTD-AIRPORT.KSI', '0544335637', '0547255509', 'AIRPORT KUMASI', '0063/13', '', 'yes'),
+(31, ' P K B', ' P K B COMPANY LTD', '0244276662', '', 'OFORIKROM', '203/17', '', 'yes'),
+(32, 'HANNAH OBENG NYAMAAH', 'HANNAH OBENG NYAMAAH', '0', '', '', '', '', 'yes'),
+(33, 'MCAPP', 'MCAPP GH. LTD', '0', '', '', '141/16', '', 'yes'),
+(34, 'KING EDWARD', 'KING EDWARD HELLO FM', '0206856565', '', '', '0082/13', '', 'yes'),
+(35, 'REV SETH', 'REV SETH OWUSU BOATENG', '0246341183', '', '', '180/17', '', 'yes'),
+(36, 'ASONABA / VTF', 'ASONABA / VTF', '023489799', '0503063517', '', '0105/13', '', 'yes'),
+(37, 'KING K. KUSI ', 'KING K. KUSI ENT', '0', '', '', '', '', 'yes'),
+(38, 'KING JAPAK ', 'KING JAPAK ENT', '0', '', '', '', '', 'yes'),
+(39, 'DORCAS APPIAH', 'DORCAS APPIAH', '0541674845', '', '', '', '', 'yes'),
+(40, ' DELLE HOUSE-NANDOM', ' DELLE HOUSE-NANDOM', '0242104833', '', '', '0110/14', '', 'yes'),
+(41, 'KING DAVID ', 'KING DAVID ENT', '0247999999', '', 'APUTUOGYA', '187/17', '', 'yes'),
+(42, 'PEACE ROYAL INT. SCH.', 'PEACE ROYAL INT. SCH.', '0208123028', '', '', '0394/12', '', 'yes'),
+(43, 'NANA KWAME ASAMOAH', 'NANA KWAME ASAMOAH', '027 120 1723', '0244465 650', '', '0138/14', '', 'yes'),
+(44, 'HARRY TUFFOUR', 'HARRY TUFFOUR RURAL BANK', '0269477692', '', 'ATWIMA KOFORIDUA', '187/17', '', 'yes'),
+(45, 'JOSEPHINE ASHETEY', 'JOSEPHINE ASHETEY.UK', '00447404658216', '', 'UK', '0146/14', '', 'yes'),
+(46, 'MAAME BOATEMAA', 'MAAME BOATEMAA.KESSBEN', '0244011471', '', '', '172/17', '', 'yes'),
+(47, 'HOUSE OF POWER', 'HOUSE OF POWER MIN. INT', '050-66 99 884', '0241-298636', '', '0175/14', '', 'yes'),
+(48, 'MAA-KOS ', 'MAA-KOS .DOTEI', '0', '', '', '221/17', '', 'yes'),
+(49, ' PRILINDA ENT', ' PRILINDA ENT. ROMAN HILL', '0244787733', '', 'ROMAN HILL KUMASI', 'NAILS', '', 'yes'),
+(50, ' E .AWUAH', ' E.AWUAH HOTELS LTD.DOTEI', '0244614260', '', 'DOTEI', '221/17', '', 'yes'),
+(51, 'SAMPSCO', 'SAMPSCO ENT', '0244787733', '', '', '0305/14', '', 'yes'),
+(52, ' ELD. RICHARD ANTWI.', ' ELD. RICHARD ANTWI - BRONI', '0244595656', '', '', '0109/16', '', 'yes'),
+(53, ' K. B. H. ', ' K. B. H. INT.', '0', '', '', '0164/17', '', 'yes'),
+(54, 'POLICE CHURCH', 'POLICE CHURCH.DEPOT-KSI', '0202952101', '', 'KUMASI', '0070/13', '', 'yes'),
+(55, 'B.B ACHEAMFOUR', 'B.B ACHEAMFOUR & SONS.LTD.', '0208121449', '', '', '0310/14', '', 'yes'),
+(56, 'SISTER MILLIICENT', 'SISTER MILLIICENT', '0242201881', '', 'BUOKROM TROBA', '126/17', '', 'yes'),
+(57, 'ROYAL TV', 'ROYAL TV', '0', '', 'KUMASI / ACCRA', '126/17', '', 'yes'),
+(58, 'NYAME NA AYE', 'NYAME NA AYE ENT', '0541067260', '', 'TEPA', '158/17', '', 'yes'),
+(59, 'VICTORY ', 'VICTORY BOUTIK', '0244946405', '', 'ADAKO JACHIE', '', '', 'yes'),
+(60, 'ERIC NANA ADU', 'ERIC NANA ADU', '0', '', 'JACHIE', '', '', 'yes'),
+(61, 'ALHAJI GUASU', 'ALHAJI GUASU', '0244638618', '0208165239', '', '041/03', '', 'yes'),
+(62, 'REV OSEI BONSU', 'AKROPONG-KOKOBEN', '0244384044', '0273585847', 'AKROPONG-KOKOBEN', '0371/15', '', 'yes'),
+(63, 'ANTE AFIA-KENTE', 'ANTE AFIA-KENTE', '0243235376', '', 'ATASOMANSO', '0152/17', '', 'yes'),
+(64, ' JUSBRO OIL LTD', ' JUSBRO OIL LTD', '0244461397', '', '', '0371/15', '', 'yes'),
+(65, 'KATAKURA', 'KATAKURA ENT', '0', '', '', '', '', 'yes'),
+(66, 'F-FOKS', 'F-FOKS CONST.LTD.', '0574300001', '', '', '207/17', '', 'yes'),
+(67, ' FREKO', ' FREKO LTD', '0', '', 'ACCRA', '0371/15', '', 'yes'),
+(68, ' ISSAH ALHASSAN', ' ISSAH ALHASSAN', '0266439704', '', 'ABIREM', '367/15', '', 'yes'),
+(69, ' AMOS.K.B', ' AMOS.K.B VENTURES', '0244147108', '0541491940', 'NT-BUOHO', '', '', 'yes'),
+(70, ' TOM-BOAT', ' TOM-BOAT ENT', '0', '', '', '', '', 'yes'),
+(71, 'ALHAJI', 'ALHAJI', '0', '', '', '', '', 'yes'),
+(72, ' MT. SINAI', ' MT. SINAI METHD. CHURCH.', '0241793133', '0249079312', 'SABRONUM', '121/17', '', 'yes'),
+(73, 'PROF. HUBERT O.RICHARD', 'PROF. HUBERT O.RICHARD', '0245141650', '', '', '122/16', '', 'yes'),
+(74, 'FRAN-BOA', 'FRAN-BOA ENT', '0', '', 'MAASE', '', '', 'yes'),
+(75, 'ADU ENT ', 'ADU ENT -FAWODE', '0', '', 'FAWODE', '', '', 'yes'),
+(76, 'REV O. B.', 'REV O B, DENCHEMOUSO', '0244209135', '', 'ATWIMA DENCHEMOUSO', '0371/15', '', 'yes'),
+(77, 'ABABIO EXPRESS', 'ABABIO EXPRESS LTD', '0200552385', '', '', '142/16', '', 'yes'),
+(78, 'KWAME OWUSU  ', 'KWAME OWUSU  ', '0232387010', '', 'ATWIMA TAKYIMAN', '', '', 'yes'),
+(79, 'ELLIS ROYAL', 'ELLIS ROYAL', '024475566', '', 'KEJETIA', '', '', 'yes'),
+(80, 'ISAAC BOAKYE', 'ISAAC BOAKYE-ONWE', '0247637658 ', '', '', '138/16', '', 'yes'),
+(81, 'WANTI LTD', 'WANTI LTD', '0246763742', '', 'NEW MISSION ACADEMY', '', '', 'yes'),
+(82, 'BENJAMIN KONADU', 'BENJAMIN KONADU-SABATO', '0555793196', '', '', '', '', 'yes'),
+(83, 'K-POAKWA', 'K-POAKWA ENT-ABOASO', '0', '', 'ABOASO', '', '', 'yes'),
+(84, ' NANA KAMKAM', ' NANA KAMKAM', '0244119219', '0208113791', '', '341/14', '', 'yes'),
+(85, 'KWAME ANTWI', 'KWAME ANTWI ENT', '0243382527', '', '', '132/17', '', 'yes'),
+(86, ' 4 GARRISON ARMY', ' 4 GARRISON ARMY C/PLEX', '0208228907', '', 'SDA CHURCH', '130/17', '', 'yes'),
+(87, 'DAY BREAK', 'DAY BREAK ENT', '0241378491', '0244547744', '', '', '', 'yes'),
+(88, 'MR. APPIAH', 'MR. APPIAH ENT-KONONGO', '0', '', 'KONONGO', '', '', 'yes'),
+(89, ' MAMA MAGGIE', ' MAMA MAGGIE', '0268772781', '', '', '348/15', '', 'yes'),
+(90, '  NKRUMAH AFRIYIE', '  NKRUMAH AFRIYIE ENT', '0209443503', '', '', '', '', 'yes'),
+(91, ' DE-GEONS', ' DE-GEONS INVEST.LTD', '0', '', '', '', '', 'yes'),
+(92, 'PASTOR SUNDAY', 'PASTOR SUNDAY-TAFO', '0547577332', '', 'TAFO', '', '', 'yes'),
+(93, ' NANANOM', ' NANANOM ENT', '0', '', 'MAASE', '', '', 'yes'),
+(94, 'JACOBS ABORAA', 'JACOBS ABORAA CO. LTD', '0240968994', '', 'ASAWASI MARKET', '485/15', '', 'yes'),
+(95, 'PEACE & LOVE', 'PEACE & LOVE HOSPITAL', '0244145064', '', 'ODUM', '', '', 'yes'),
+(96, 'RANA MOTORS', 'order & Receipt by -Vikram Anand', '0274995559', '', '', '', '', 'yes'),
+(97, ' BEATRICE BOATENG', ' BEATRICE BOATENG-APIRE', '0', '', 'APIRE-SANTASI', '', '', 'yes'),
+(98, 'BRO VINCENT', 'BRO VINCENT', '0', '', 'PATASI-KUMASI', '531/15', '', 'yes'),
+(99, 'DANIEL PETROSON', 'DANIEL PETROSON', '0245-61 44 11', '0246 93 94 37', 'SANTASI', '', '', 'yes'),
+(100, 'MAA FELICIA', 'MAA FELICIA-PAKYI-2', '0', '', 'PAKYI-2', '', '', 'yes'),
+(101, 'ST PATRICK', 'ST PATRICK MID. TRAIN.SCH.', '0206990007', '', '', '', '', 'yes'),
+(102, 'BARRIJI', 'BARRIJI', '0', '', '', '414/15', '', 'yes'),
+(103, 'K.W.ADDO', 'K.W.ADDO CO.LTD', '0243615027', '', 'DORMAA-AHENKRO', '', '', 'yes'),
+(104, ' NKWAHIA', ' NKWAHIA ENT', '0', '', '', '564/16', '', 'yes'),
+(105, ' CHAMPION', ' CHAMPION ENT', '0', '', '', '', '', 'yes'),
+(106, 'GRACE OUTREACH', 'GRACE OUTREACH CHURCH', '0208158450', '', 'SUAME', '497/15', '', 'yes'),
+(107, 'FELEBOS', 'FELEBOS ENT', '0', '', '', '', '', 'yes'),
+(108, 'PAA SOLO', 'PAA SOLO LTD', '0247850636', '', '', '332/15', '', 'yes'),
+(109, 'S.POKUS', 'S.POKUS ENT', '0243320101', '', '', '', '', 'yes'),
+(110, ' NETWORK', ' NETWORK ENT', '0247850636', '', 'AHWIAA', '332/15', '', 'yes'),
+(111, ' NANA AWUAH', ' NANA AWUAH VENTURES', '0200697537', '', 'KENYASI-KSI', '624/16', '', 'yes'),
+(112, 'WOFA MIKE', 'WOFA MIKE ENT', '0244474706', '', '', '', '', 'yes'),
+(113, ' ELDER APPIAH-KUBI', ' ELDER APPIAH-KUBI ENT', '0', '', '', '', '', 'yes'),
+(114, 'JOSHOB', 'JOSHOB CONST.LTD', '0244267758', '', '', '', '', 'yes'),
+(115, 'B.B.S', 'B.B.S ENT', '0', '', '', '', '', 'yes'),
+(116, 'ASUMADU', 'ASUMADU ENT', '0243848870', '', '', '', '', 'yes'),
+(117, 'THOMAS OSEI', 'THOMAS OSEI - SABRONUM', '0242341990', '', 'SABRONUM', '', '', 'yes'),
+(118, 'JESUS IS SOON COMING', 'JESUS IS SOON COMING ENT.', '0242173276', '0502867121', '', '332/15', '', 'yes'),
+(119, 'MUMMY ', 'MUMMY  ENT', '0', '', '', '', '', 'yes'),
+(120, ' OPHELIA', ' OPHELIA ENT', '0', '', '', '', '', 'yes'),
+(121, ' IRENE ADU', ' IRENE ADU  ENT', '0', '', '', '', '', 'yes'),
+(122, 'MICHEAL Y. ADJEI', 'MICHEAL Y. ADJEI ENT.', '0208162366', '0244163146', '', '', '', 'yes'),
+(123, 'NOT MY MIGHT', 'NOT MY MIGHT  ENT', '0', '', '', '', '', 'yes'),
+(124, 'OKOMFO ANOKYE SHS', 'OKOMFO ANOKYE SHS', '0', '', 'WIAMOASE', '', '', 'yes'),
+(125, 'JOEMENS  ENT', 'JOEMENS  ENT', '0', '', 'ABREPO', '', '', 'yes'),
+(126, 'KIKI J', 'KIKI J ENT', '0561436780', '', '', '', '', 'yes'),
+(127, 'ELDER BRENYA', 'ELDER BRENYA ENT', '0244719343', '', '', '', '', 'yes'),
+(128, 'INSHA ALLAH', 'INSHA ALLAH ENT', '0244548661', '', 'KODIE MOWIRE', '', '', 'yes'),
+(129, 'WOFA ATTA ENT.', 'WOFA ATTA ENT. ASENUA', '0244-46 1168', '', 'ASENUA-MAMPONGTEN', '', '', 'yes'),
+(130, 'MPAEBO', 'MPAEBO  ENT', '0', '', 'AFRANCHO-KRONUM', '', '', 'yes'),
+(131, 'MAAME SIKA', 'MAAME SIKA-DAKWADWOM', '0247528063', '', 'DAKWADWOM', '0196/17', '', 'yes'),
+(132, 'JOYAM', 'JOYAM VENTURES', '0244416009', '', '', '', '', 'yes'),
+(133, 'MAA REGINA', 'MAA REGINA ENT', '0', '', '', '', '', 'yes'),
+(134, 'T.K.', 'T.K.ENT', '0246361298', '', 'OHWIM', '', '', 'yes'),
+(135, 'NTK', 'NTK VENTURES', '0244268838', '', 'EJISU', '', '', 'yes'),
+(136, 'GEORGE WIREDU-BUOHO', 'GEORGE WIREDU-BUOHO', '0244211673', '', '', '', '', 'yes'),
+(137, 'MAMA ENT-JACHIE', 'MAMA ENT-JACHIE JUNCTION', '0249192584', '', 'JACHIE JUNCTION', '', '', 'yes'),
+(138, 'MADAM AGYEIWAA', 'MADAM AGYEIWAA ENT', '0244275091', '', 'AFRANCHO KUMASI', '', '', 'yes'),
+(139, 'ACHIAA', ' ACHIAA ENT-PAKOSO', '0271643227', '', 'PAKOSO', '', '', 'yes'),
+(140, ' ENYE MAHOEDEN', ' ENYE MAHOEDEN ENT', '0244784838', '', 'DENESE', '', '', 'yes'),
+(141, 'NAFKAS', 'NAFKAS ENT', '0242139414', '', 'KYEM SAWABA', '', '', 'yes'),
+(142, ' FRICO', ' FRICO ENT', '0261199660', '', 'HEMANG', '', '', 'yes'),
+(143, 'JONABEAT', 'JONABEAT ENT', '0243883168', '', 'OHWIM', '', '', 'yes'),
+(144, 'OLANDO GENTLEMAN', 'OLANDO GENTLEMAN ENT', '0243477359', '', '', '', '', 'yes'),
+(145, 'COMFORT ACHIAA ', 'COMFORT ACHIAA ENT', '0243 111 672', '', 'ONWE', '', '', 'yes'),
+(146, 'THE BLOOD OF JESUS', 'THE BLOOD OF JESUS ENT', '0244782419', '', 'SASA BUOHO', '', '', 'yes'),
+(147, 'GYAMFI', 'GYAMFI ENT', '0243333103', '', 'APRADE JUNCTION', '', '', 'yes'),
+(148, 'SARFO KANTANKA', 'SARFO KANTANKA EN', '0208172760', '', 'DENASE', '', '', 'yes'),
+(149, 'OPPONG ACHEAMPONG', 'OPPONG ACHEAMPONG', '0244708485', '', 'EJISU', '', '', 'yes'),
+(150, 'AGYA AMOAH', 'AGYA AMOAH', '0244612618', '', 'MONWIRE', '', '', 'yes'),
+(151, ' MAAME YEBOAH', 'MAAME YEBOAH ENT', '0243665588 ', '', 'APIMSO', '', '', 'yes'),
+(152, 'MAA GYAMFI', 'MAA GYAMFI ENT', '0243835024', '', 'AKROWA', '', '', 'yes'),
+(153, 'K-OPPONG', 'K-OPPONG ENT', '0244060294', '', 'BUOHO PATRIENSA', '', '', 'yes'),
+(154, 'OBAA YAA', 'OBAA YAA ENT', '0269806708', '', 'DOMIABRA', '', '', 'yes'),
+(155, ' BE BLESSED', ' BE BLESSED ENT', '0244130620', '', 'HEMANG', '', '', 'yes'),
+(156, 'DAN VICTA ', 'DAN VICTA  ENT', '0267803499', '', 'JACHIE', '', '', 'yes'),
+(157, 'CHAIRMAN', 'CHAIRMAN ENT', '0244211673', '', 'TAFO OKESS', '', '', 'yes'),
+(158, ' MALIK', ' MALIK ENT', '0', '', 'MAMPONGTEN', '', '', 'yes'),
+(159, 'ASANKO', 'ASANKO ENT', '0246168253', '', 'AHENKRO', '', '', 'yes'),
+(160, 'FRAGULDA', 'FRAGULDA ENT', '0554295095', '', 'ONWE', '', '', 'yes'),
+(161, 'MAAME PANIN', ' MAAME PANIN', '0246253182', '', 'EFFIDUASI', '', '', 'yes'),
+(162, ' TWUM-BARIMA', ' TWUM-BARIMA ENT', '0208469991', '', 'FUMESUA', '', '', 'yes'),
+(163, 'HAJIA FLORENCE', 'HAJIA FLORENCE', '0', '', '', '', '', 'yes'),
+(164, 'HAJIA ZAM', 'HAJIA ZAM', '0', '', '', '', '', 'yes'),
+(165, 'MAAME SERWAA', 'MAAME SERWAA ENT', '0', '', '', '', '', 'yes'),
+(166, 'DANSO', 'DANSO ENT', '0', '', 'BUOHO', '', '', 'yes'),
+(167, 'OHENEBA', 'OHENEBA VENTURES', '0242286677', '', 'AFRANCHO HEMAN', '', '', 'yes'),
+(168, ' ASANTE', ' ASANTE ENT', '0', '', 'AFRANCHO', '', '', 'yes'),
+(169, 'TALENTED LUCKY', 'TALENTED LUCKY', '0', '', '', '', '', 'yes'),
+(170, 'TUMU', 'TUMU AGENT', '0548496027', '', 'UWR', '', '', 'yes'),
+(171, 'MOZATO', 'MOZATO ENT', '0245264699', '', '', '', '', 'yes'),
+(172, 'ERICO', 'ERICO ROYAL VENTURES', '0247925430', '', 'AHENKRO', '', '', 'yes'),
+(173, 'SHAI-CHINA', 'SHAI-CHINA', '0', '', '', '', '', 'yes'),
+(174, 'MAAME MPAEBO', 'MAAME MPAEBO ENT', '0244-16 63 30', '', '', '', '', 'yes'),
+(175, 'JICS', 'JICS ASOMDWOE ENT', '0247925430', '', 'KODIE', '', '', 'yes'),
+(176, 'EMMADABOR ', 'EMMADABOR ENT', '0247925430', '', 'AKYEREMADE', '', '', 'yes');
 
 -- Table `customers_account` --
 CREATE TABLE `customers_account` (
@@ -65,6 +281,7 @@ CREATE TABLE `customers_account` (
   `QUANTITY` text NOT NULL,
   `WAYBILL` text NOT NULL,
   `DEBIT` text NOT NULL,
+  `discountAllowed` text NOT NULL,
   `CREDIT` text NOT NULL,
   `BALANCE` text NOT NULL,
   `acc_date` text NOT NULL,
@@ -72,25 +289,7 @@ CREATE TABLE `customers_account` (
   `entry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
-
-INSERT INTO `customers_account` (`id`, `cust_id`, `DESCRIPTION`, `QUANTITY`, `WAYBILL`, `DEBIT`, `CREDIT`, `BALANCE`, `acc_date`, `price_per_sing`, `entry_date`, `active`) VALUES
-(1, 1, '', '', '', '', '', '', '', '', '2017-12-23 08:39:40', 'yes'),
-(2, 1, 'I LOVE PROGRAMMING (EBSAY)', '30', '33333333', '600', '10.00', '1150', '2017-12-16', '200', '2017-12-23 08:43:48', 'yes'),
-(3, 1, 'Cement (GHACEM)', '30', '33333333', '600', '10.00', '1740', '2017-12-16', '200', '2017-12-23 08:48:40', 'yes'),
-(4, 1, 'Cash Payment', '', '', '', '', '1000', '2017-12-23', '', '2017-12-23 10:59:46', 'yes'),
-(5, 1, 'Cash Payment', '', '', '', '50', '950', '2017-12-23', '', '2017-12-23 11:01:18', 'yes'),
-(26, 2, 'Cement (GHACEM)', '3', '33333333', '63', '', '63', '2018-01-07', '21', '2018-01-07 00:47:21', 'yes'),
-(27, 2, 'Cement (GHACEM)', '2', '33333', '42', '', '105', '2018-01-07', '21', '2018-01-07 00:49:01', 'yes'),
-(28, 2, 'Cement (GHACEM)', '100', '33333333', '2100', '', '2205', '2018-01-07', '21', '2018-01-07 00:51:08', 'yes'),
-(29, 2, 'Cement (GHACEM)', '2', '33333', '42', '', '2247', '2018-01-07', '21', '2018-01-07 00:51:50', 'yes'),
-(30, 2, 'Cement (GHACEM)', '2', '33333', '42', '', '2289', '2018-01-07', '21', '2018-01-07 00:52:02', 'yes'),
-(31, 2, 'Cash Payment', '', '', '', '2000', '289', '2018-01-07', '', '2018-01-07 01:06:55', 'yes'),
-(32, 2, 'Cheque No. 23344 aha', '', '', '', '289', '0', '2018-01-07', '', '2018-01-07 01:07:31', 'yes'),
-(33, 4, 'Cement (GHACEM)', '200', '123HJYB', '4200', '', '4200', '2018-01-10', '21', '2018-01-09 23:56:02', 'yes'),
-(34, 4, 'Cement (GHACEM)', '2', '33333BMHVGJB ', '42', '', '4242', '2018-01-10', '21', '2018-01-09 23:57:23', 'yes'),
-(35, 1, 'Cement (GHACEM)', '100', '33333ss', '2100', '', '2100', '2018-01-10', '21', '2018-01-10 10:09:34', 'yes'),
-(36, 1, 'Iron rod (5/8)', '100', 'KHJ35445', '3000', '500', '4600', '2018-01-10', '30', '2018-01-10 11:05:04', 'yes');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Table `dbmanager` --
 CREATE TABLE `dbmanager` (
@@ -129,15 +328,7 @@ CREATE TABLE `inventories` (
   `Price_Before_Invent` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-
-INSERT INTO `inventories` (`id`, `itemName`, `itemDifferentiator`, `Description`, `WAY_BILL`, `Quantity`, `Total`, `Driver_Info`, `Contact`, `destination`, `invent_Date`, `year`, `month`, `day`, `EnteryDate`, `Price_Before_Invent`, `active`) VALUES
-(1, 'Cement', 'GHACEM', 'WG2001A', '000223', '850', '850', 'Asumadu', '0240000330', '3', '2018-01-07', '2018', '01', '07', '7th January, 2018', '21', 'yes'),
-(2, 'Cement', 'GHACEM', 'FUMESUA(FUMESUA-KSI)', '1293013', '500', '1350', '', '', '1', '2018-01-07', '2018', '01', '07', '7th January, 2018', '21', 'yes'),
-(3, 'Cement', 'GHACEM', 'AFRANCHO(AFRANCHO KSI)', '1293013', '2', '1352', '', '', '2', '2018-01-07', '2018', '01', '07', '7th January, 2018', '21', 'yes'),
-(4, 'Cement', 'GHACEM', 'AFRANCHO(AFRANCHO KSI)', '1293013', '2', '1354', '', '', '2', '2018-01-07', '2018', '01', '07', '7th January, 2018', '21', 'yes'),
-(5, 'Cement', 'SOL', 'WG2001A', '000223ZWW', '500', '500', 'Asumadu', '0240000330', '1', '2019-01-09', '2019', '01', '09', '8th January, 2018', '21', 'yes'),
-(6, 'Iron rod', '5/8', 'AS 4545 G', '000223', '1000', '1000', 'Asumadu', '0246453171', '1', '2018-01-09', '2018', '01', '09', '9th January, 2018', '27', 'yes');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Table `items` --
 CREATE TABLE `items` (
@@ -149,15 +340,33 @@ CREATE TABLE `items` (
   `date_added` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 INSERT INTO `items` (`id`, `itemName`, `differentiator`, `itemPrice`, `quantity`, `date_added`, `active`) VALUES
-(1, 'Cement', 'GHACEM', '21', '339', '7th January, 2018', 'yes'),
-(2, 'Cement', 'SOL', '21', '500', '7th January, 2018', 'yes'),
-(3, 'Cement', 'Dimond', '22', '', '7th January, 2018', 'yes'),
-(4, 'Cement', 'WP', '21', '', '7th January, 2018', 'yes'),
-(5, 'Cement', 'FCL', '22', '', '7th January, 2018', 'yes'),
-(6, 'Iron rod', '5/8', '30', '800', '9th January, 2018', 'yes');
+(1, 'CEMENT', 'GHACEM', '29.50', '', '17th January, 2018', 'yes'),
+(2, 'CEMENT', 'DMD 32.5', '27.50', '', '17th January, 2018', 'yes'),
+(3, 'IRON ROD', '5.5mm', '4.00', '', '17th January, 2018', 'yes'),
+(4, 'CEMENT', 'DMD 42.5', '29.00', '', '17th January, 2018', 'yes'),
+(5, 'IRON ROD', '8mm', '5.50', '', '17th January, 2018', 'yes'),
+(6, 'CEMENT', 'DGT', '30.50', '', '17th January, 2018', 'yes'),
+(7, 'IRON ROD', '9mm', '13.00', '', '17th January, 2018', 'yes'),
+(8, 'CEMENT', 'SOL', '28.00', '', '17th January, 2018', 'yes'),
+(9, 'IRON ROD', '10mm', '14.5', '', '17th January, 2018', 'yes'),
+(10, 'CEMENT', 'WP', '26.50', '', '17th January, 2018', 'yes'),
+(11, 'IRON ROD', '11.5mm', '17.50', '', '17th January, 2018', 'yes'),
+(12, 'CEMENT', 'CMF 32.5', '28.00', '', '17th January, 2018', 'yes'),
+(13, 'CEMENT', 'CMF 42.5', '29.00', '', '17th January, 2018', 'yes'),
+(14, 'IRON ROD', '12mm', '21.00', '', '17th January, 2018', 'yes'),
+(15, 'IRON ROD', '14mm', '27.50', '', '17th January, 2018', 'yes'),
+(16, 'IRON ROD', '16mm', '37.5', '', '17th January, 2018', 'yes'),
+(17, 'HIGH TENSILE IRON ROD', '8mm H/T', '25.50', '', '17th January, 2018', 'yes'),
+(18, 'IRON ROD', '18mm', '53.00', '', '17th January, 2018', 'yes'),
+(19, 'HIGH TENSILE IRON ROD', '10mm H/T', '29.50', '', '17th January, 2018', 'yes'),
+(20, 'IRON ROD', '20mm', '60.00', '', '17th January, 2018', 'yes'),
+(21, 'HIGH TENSILE IRON ROD', '12mm H/T', '43.00', '', '17th January, 2018', 'yes'),
+(22, 'IRON ROD', '25mm', '150.00', '', '17th January, 2018', 'yes'),
+(23, 'HIGH TENSILE IRON ROD', '16mm H/T', '70.00', '', '17th January, 2018', 'yes'),
+(24, 'HIGH TENSILE IRON ROD', '20mm H/T', '106.00', '', '17th January, 2018', 'yes');
 
 -- Table `onlineupdate` --
 CREATE TABLE `onlineupdate` (
@@ -168,7 +377,7 @@ CREATE TABLE `onlineupdate` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `onlineupdate` (`id`, `dated`, `seconds`) VALUES
-(1, '9h January, 2018', '51');
+(1, '9h January, 2018', '31');
 
 -- Table `salesandsupplies` --
 CREATE TABLE `salesandsupplies` (
@@ -190,18 +399,7 @@ CREATE TABLE `salesandsupplies` (
   `EnteryDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `active` varchar(3) NOT NULL DEFAULT 'not',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
-INSERT INTO `salesandsupplies` (`id`, `branch`, `itemID`, `DESCRIPTION`, `WAY_BILL`, `QTY`, `COST_PRICE`, `SALESandSUPPLY`, `SALES_AMT`, `TOTAL_AMT`, `BALANCE`, `invent_Date`, `Year`, `Month`, `Day`, `EnteryDate`, `active`) VALUES
-(1, 3, 1, 'WG2001A', '000223', '850', '17850', '', '', '', '850', '2018-01-07', '2018', '01', '07', '2018-01-06 23:50:12', 'yes'),
-(2, 3, 1, 'AFRANCHO(AFRANCHO KSI)', '', '', '', '500', '', '0', '350', '2018-01-07', '', '', '', '2018-01-06 23:51:48', 'yes'),
-(3, 1, 1, 'FUMESUA(FUMESUA-KSI)', '1293013', '500', '10500', '', '', '', '500', '2018-01-07', '2018', '01', '07', '2018-01-06 23:51:48', 'yes'),
-(4, 3, 1, 'SALES/SUPPLY', '', '', '', '100', '2100', '2100', '250', '2018-01-07', '', '', '', '2018-01-06 23:52:26', 'yes'),
-(5, 1, 1, 'PANKRONO(PANKRONO)', '', '', '', '2', '', '0', '498', '2018-01-07', '', '', '', '2018-01-07 00:14:09', 'yes'),
-(6, 2, 1, 'AFRANCHO(AFRANCHO KSI)', '1293013', '2', '42', '', '', '', '4', '2018-01-07', '2018', '01', '07', '2018-01-07 00:14:09', 'yes'),
-(7, 1, 2, 'WG2001A', '000223ZWW', '500', '10500', '', '', '', '500', '2019-01-09', '2019', '01', '09', '2018-01-08 16:50:21', 'yes'),
-(8, 1, 6, 'AS 4545 G', '000223', '1000', '27000', '', '', '', '1000', '2018-01-09', '2018', '01', '09', '2018-01-09 22:09:36', 'yes'),
-(9, 1, 6, 'SALES/SUPPLY', '', '', '', '100', '2700', '2700', '900', '2018-01-09', '', '', '', '2018-01-09 22:12:00', 'yes');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Table `theme` --
 CREATE TABLE `theme` (
@@ -211,7 +409,7 @@ CREATE TABLE `theme` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `theme` (`id`, `themes`) VALUES
-(1, 'other_Side_all_dark');
+(1, 'other_side_all');
 
 -- Table `users` --
 CREATE TABLE `users` (
@@ -232,8 +430,8 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`id`, `user_id`, `fullname`, `username`, `password`, `mobile`, `tel`, `email`, `address`, `add_date`, `active`, `login`, `last_entry`) VALUES
-(0, 'ADMINISTRATOR', 'ADMINISTRATOR', 'adminns', '319f4d26e3c536b5dd871bb2c52e3178', '', '', '', '', '2018-01-11 06:07:42', 'yes', 'no', '11th January, 2018 - 5:07 AM'),
-(1, 'AN455', 'Say Nana Yaw Samuel', 'say', '319f4d26e3c536b5dd871bb2c52e3178', '0240066392', '', '', 'F22/1 GAB', '2018-01-11 11:22:52', 'yes', 'yes', '11th January, 2018 -  10:22 PM'),
+(0, 'ADMINISTRATOR', 'ADMINISTRATOR', 'adminns', '319f4d26e3c536b5dd871bb2c52e3178', '', '', '', '', '2018-01-17 07:53:50', 'yes', 'no', '17th January, 2018 - 6:53 AM'),
+(1, 'AN455', 'Say Nana Yaw Samuel', 'say', '319f4d26e3c536b5dd871bb2c52e3178', '0240066392', '', '', 'F22/1 GAB', '2018-01-17 09:25:06', 'yes', 'yes', '17th January, 2018 -  8:25 AM'),
 (2, 'KPCL1', 'Godson Dacosta', 'ayayay', '3677da84ef8e0675a4ca74280da07a3a', '0240066392', '', '', 'PO 11 POKU', '2018-01-03 19:14:15', 'yes', 'no', ''),
 (3, '123', 'Nana Yaw Dedrick', 'sayt', '202cb962ac59075b964b07152d234b70', '02400663931', '05596854421', 'RASSAY32@GMAIL.COM', 'Gso Her', '2018-01-03 10:12:27', 'yes', 'yes', '3rd January, 2018 -  12:08 AM'),
 (5, 'aaaa;', 'SAY SAY', 'AN488748796', '4baff08d7dda0337125dfa9ea94b1028', '02020202020220', '00000000', 'rassay31@gmail.com', 'GS 44', '2018-01-08 09:36:19', 'yes', 'no', '');

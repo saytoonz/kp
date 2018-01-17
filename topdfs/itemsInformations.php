@@ -31,7 +31,7 @@ $this->setFont("Arial","B",11);
 $this->SetFillColor(180,180,255);
 $this->SetDrawColor(50,50,100);
    
-$this->Cell(60,10,'ITEM NAME',1,0,'C',true);
+$this->Cell(60,10,'BRANCH NAME',1,0,'C',true);
 $this->Cell(45,10,'TOTAL RECEIVED',1,0,'C',true);
 $this->Cell(40,10,'QUANTITY SOLD',1,0,'C',true);
 $this->Cell(40,10,'QUANTITY LEFT',1,1,'C',true);
@@ -43,7 +43,7 @@ $this->Cell(40,10,'QUANTITY LEFT',1,1,'C',true);
     function Footer(){
       $this->SetY(-15);
       $this->setFont('Arial','I',10);
-      $this->Cell(170,10,'Sheet '.$this->PageNo().' / {pages}',0,0,'R');
+      $this->Cell(170,10,'Sheet '.$this->PageNo().' / {pages}                 Designed and Managed Nsromapa',0,0,'R');
     }
 }
 

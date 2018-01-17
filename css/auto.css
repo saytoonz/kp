@@ -135,9 +135,9 @@ a{
         box-shadow:0 0 10px rgba(0, 0, 0, .15);
         font-size:16px;
         line-height:24px;
-        font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        font-family:'sans-serif, Helvetica Neue, Helvetica, Helvetica, Arial';
         color:#555;
-        background-image: url(../images/crest_trans.png);
+        background-image: url(../images/watermark.png);
         background-size: 60% 80%;
         background-repeat: no-repeat;
         background-position: center;
@@ -201,19 +201,19 @@ a{
       float: right; margin-right: 10%;
     }
     
-    @media only screen and (max-width: 600px) {
-        .printList table tr.top table td{
-            width:100%;
-            display:block;
-            text-align:center;
-        }
-        
-        .printList table tr.information table td{
-            width:100%;
-            display:block;
-            text-align:center;
-        }
+@media only screen and (max-width: 600px) {
+    .printList table tr.top table td{
+        width:100%;
+        display:block;
+        text-align:center;
     }
+    
+    .printList table tr.information table td{
+        width:100%;
+        display:block;
+        text-align:center;
+    }
+}
 @media print {
 	body{
 		-webkit-print-color-adjust: exact;

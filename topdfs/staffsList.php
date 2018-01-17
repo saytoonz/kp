@@ -39,7 +39,7 @@ $this->Cell(45,10,'ADDRESS',1,1,'C',true);
     function Footer(){
       $this->SetY(-15);
       $this->setFont('Arial','I',10);
-      $this->Cell(170,10,'Sheet '.$this->PageNo().' / {pages}',0,0,'R');
+      $this->Cell(170,10,'Sheet '.$this->PageNo().' / {pages}                 Designed and Managed Nsromapa',0,0,'R');
     }
 }
 

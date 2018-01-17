@@ -71,7 +71,7 @@
 			 					
 				if (mysql_num_rows($selectuserid)!==0) {
 					
-				mysql_query("UPDATE customerInfo  SET Customername='$Customername',Companyname='$Customername',mobile='$mobile',tel='$tel',address='$address', Folio='$Folio' WHERE id='$customerID' AND active='yes'");
+				mysql_query("UPDATE customerInfo  SET Customername='$Customername',Companyname='$Companyname',mobile='$mobile',tel='$tel',address='$address', Folio='$Folio' WHERE id='$customerID' AND active='yes'");
 			 		?>
 						<script>
 							location.replace('home.php?SERVER=customerinfoViewInfo<?php echo $customerID ?>');

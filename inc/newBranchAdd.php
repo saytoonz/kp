@@ -24,11 +24,11 @@
 						</script>
 					<?php
 			 	}else{
-					mysql_query("INSERT INTO braches (branchName, Location, Contact, date_added) VALUES ('$branchName', '$Location', $Contact, '$date_added')");
+					mysql_query("INSERT INTO braches (branchName,Location,Contact,date_added)VALUES('$branchName','$Location','$Contact','$date_added')");
 					echo "
 						<div id=\"successResponse\">
 
-							<span style=\"font-family: Lucida Fax;  color: #fff; font-size: 22px;\">Item Added <br><br></span><span style=\"font-family: Lucida Calligraphy; font-size: 30px;  color: #fff;\">Successfully</span><br><br><br>
+							<span style=\"font-family: Lucida Fax;  color: #fff; font-size: 22px;\">Branch Added <br><br></span><span style=\"font-family: Lucida Calligraphy; font-size: 30px;  color: #fff;\">Successfully</span><br><br><br>
 							<img src=\"images/ok.png\" onclick=\"location.replace('home.php?SERVER=newBranchAdd');\" width=\"180px\" style=\"cursor: pointer;\" title=\"click to continue\">
 							
 						</div>
