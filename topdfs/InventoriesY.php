@@ -44,11 +44,12 @@ $this->SetDrawColor(50,50,100);
 $this->Cell(20,5,'DATE',1,0,'C',true);
 $this->Cell(47,10,'DESCRIPTION',1,0,'C',true);
 $this->Cell(28,10,'WAY BILL NO.',1,0,'C',true);
-$this->Cell(20,10,'QUANTITY',1,0,'C',true);
-$this->Cell(22,10,'TOTAL',1,0,'C',true);
+$this->Cell(19,10,'QUANTITY',1,0,'C',true);
+$this->Cell(19,10,'DAMAGES',1,0,'C',true);
+$this->Cell(19,10,'TOTAL',1,0,'C',true);
 $this->Cell(40,10,'DRIVER INFO',1,0,'C',true);
 $this->Cell(45,10,'CONTACTS',1,0,'C',true);
-$this->Cell(55,10,'DESTINATION',1,0,'C',true);
+$this->Cell(45,10,'DESTINATION',1,0,'C',true);
 $this->Cell(0,5,'',0,1);
 
 
@@ -94,11 +95,13 @@ $itemName=$get['itemName'];
 $differentiator=$get['differentiator'];
 
 $tQuantity="";
+$tDamages="";
 $query=mysql_query("SELECT * FROM inventories WHERE itemName='$itemName' AND itemDifferentiator='$differentiator' AND year='$Year' AND active='yes'  ORDER BY invent_Date ASC");
 while ($data=mysql_fetch_array($query)) {
 
 	$date=$data['invent_Date'];
   $tQuantity+=$data['Quantity'];
+  $tDamages+=$data['Damages'];
   $destination=$data['destination'];
 
     $qq = mysql_query("SELECT * FROM braches WHERE id='$destination' AND active='yes'");
@@ -106,23 +109,25 @@ while ($data=mysql_fetch_array($query)) {
       $branchName=$grab['branchName'];
       $Location=$grab['Location'];
 
-      $desti="$branchName - $Location";
+      $desti="$branchName";
 
     $pdf->Cell(20,10,$data['invent_Date'],1,0,'C');
     $pdf->Cell(47,10,$data['Description'],1,0,'C');
     $pdf->Cell(28,10,$data['WAY_BILL'],1,0,'C');
-    $pdf->Cell(20,10,$data['Quantity'],1,0,'C');
-    $pdf->Cell(22,10,$data['Total'],1,0,'C');
+    $pdf->Cell(19,10,$data['Quantity'],1,0,'C');
+    $pdf->Cell(19,10,$data['Damages'],1,0,'C');
+    $pdf->Cell(19,10,$data['Total'],1,0,'C');
     $pdf->Cell(40,10,$data['Driver_Info'],1,0,'C');
     $pdf->Cell(45,10,$data['Contact'],1,0,'C');
-    $pdf->Cell(55,10,$desti,1,1,'C');
+    $pdf->Cell(45,10,$desti,1,1,'C');
 
 
 }
 
   $pdf->setFont('Arial','B',14);
   $pdf->Cell(95,10,'Total',1,0);
-  $pdf->Cell(20,10,$tQuantity,1,0,'C');
+  $pdf->Cell(19,10,$tQuantity,1,0,'C');
+  $pdf->Cell(19,10,$tDamages,1,0,'C');
   $pdf->Output();
 
 ?>

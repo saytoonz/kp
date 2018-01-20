@@ -13,11 +13,12 @@
 			$tel =$_POST['tel'];
 			$address =$_POST['address'];
 			$Folio =$_POST['Folio'];
+			$branch =$_POST['branch'];
 
 
 			if ($Customername !="" || $mobile !="") {
 
-				$selectuserid = mysql_query("SELECT Customername,mobile FROM customerInfo WHERE Customername='$Customername' AND (mobile='$mobile' OR tel='$tel') AND active='yes'");
+				$selectuserid = mysql_query("SELECT Customername,mobile FROM customerInfo WHERE Customername='$Customername' AND (mobile='$mobile' OR tel='$tel') AND branch='$branch' AND active='yes'");
 			 					
 				if (mysql_num_rows($selectuserid)!==0) {
 					?>
@@ -27,7 +28,7 @@
 						</script>
 					<?php
 			 	}else{
-					mysql_query("INSERT INTO customerInfo (Customername, Companyname, mobile, tel, address, Folio) VALUES ('$Customername', '$Companyname', '$mobile', '$tel', '$address', '$Folio')");
+					mysql_query("INSERT INTO customerInfo (Customername, Companyname, mobile, tel, address, Folio, branch) VALUES ('$Customername', '$Companyname', '$mobile', '$tel', '$address', '$Folio', '$branch')");
 					echo "
 						<div id=\"successResponse\">
 
@@ -63,15 +64,16 @@
 			$tel =$_POST['telUpdate'];
 			$address =$_POST['addressUpdate'];
 			$Folio =$_POST['FolioUpdate'];
+			$branch =$_POST['branchUpdate'];
 
 
-			if ($Customername !="" || $mobile !="") {
+			if ($Customername !="" || $mobile !="" || $branch!="") {
 
 				$selectuserid = mysql_query("SELECT id FROM customerInfo WHERE id='$customerID' AND active='yes'");
 			 					
 				if (mysql_num_rows($selectuserid)!==0) {
 					
-				mysql_query("UPDATE customerInfo  SET Customername='$Customername',Companyname='$Companyname',mobile='$mobile',tel='$tel',address='$address', Folio='$Folio' WHERE id='$customerID' AND active='yes'");
+				mysql_query("UPDATE customerInfo  SET Customername='$Customername',Companyname='$Companyname',mobile='$mobile',tel='$tel',address='$address', Folio='$Folio',branch='$branch' WHERE id='$customerID' AND active='yes'");
 			 		?>
 						<script>
 							location.replace('home.php?SERVER=customerinfoViewInfo<?php echo $customerID ?>');
@@ -105,6 +107,25 @@
 
 		$customerID = substr($_GET['SERVER'], 30);
 
+
+
+
+
+	$thebranch="";
+	$query = mysql_query("SELECT * FROM braches WHERE active='yes'");
+	if (mysql_num_rows($query)===0) {
+		$thebranch="";
+	}else{
+		while ($grab=mysql_fetch_assoc($query)) {
+			$id=$grab['id'];
+			$branchName=$grab['branchName'];
+			$Location=$grab['Location'];
+
+			$thebranch.="<option value=\"$id\">$branchName($Location)</option>";
+		}
+	}
+
+
 		$query = mysql_query("SELECT * FROM customerinfo WHERE id='$customerID' AND active!='no'");
 			$grab=mysql_fetch_assoc($query);
 					$id=$grab['id'];
@@ -115,6 +136,13 @@
 					$address=$grab['address'];
 					$Folio=$grab['Folio'];
 					$active=$grab['active'];
+					$branchiN=$grab['branch'];
+
+					$qquery = mysql_query("SELECT * FROM braches WHERE id='$branchiN' AND active='yes'");
+						$fet=mysql_fetch_assoc($qquery);
+						$branchName1=$fet['branchName'];
+						$Location1=$fet['Location'];
+
 
 		echo "<form action=\"#\" method=\"post\" id=\"addNew\">
 
@@ -127,6 +155,10 @@
 			<input type=\"text\" name=\"telUpdate\" value=\"$tel\"  placeholder=\"Telephone Number\"> <br>
 			<input type=\"text\" name=\"addressUpdate\"  value=\"$address\"placeholder=\"Address\"> <br>
 			<input type=\"text\" name=\"FolioUpdate\"  value=\"$Folio\"placeholder=\"L / Folio\"> <br>
+			<select name=\"branchUpdate\" title=\"Choose a Branch For Customer\"> 
+				<option value='$branchiN'>$branchName1($Location1)</option>
+				$thebranch
+			</select><br>
 
 
 			<input type=\"submit\" name=\"Update_customer\" value=\"Update Info\">
@@ -137,6 +169,24 @@
 
 
 	} else {
+
+
+			$thebranch="";
+	$query = mysql_query("SELECT * FROM braches WHERE active='yes'");
+	if (mysql_num_rows($query)===0) {
+		$thebranch="";
+	}else{
+		while ($grab=mysql_fetch_assoc($query)) {
+			$id=$grab['id'];
+			$branchName=$grab['branchName'];
+			$Location=$grab['Location'];
+
+			$thebranch.="<option value=\"$id\">$branchName($Location)</option>";
+		}
+	}
+
+
+
 		echo "
 		<form action=\"#\" method=\"post\" id=\"addNew\">
 
@@ -149,6 +199,10 @@
 			<input type=\"text\" name=\"tel\" placeholder=\"Telephone Number\"> <br>
 			<input type=\"text\" name=\"address\" placeholder=\"Address\"> <br>
 			<input type=\"text\" name=\"Folio\" placeholder=\"L / Folio\"> <br>
+			<select name=\"branch\" title=\"Choose a Branch For Customer\"> 
+                <option value=''>Select Branch taking item from...</option>
+				$thebranch
+			</select><br>
 
 
 			<input type=\"submit\" name=\"add_customer\" value=\"Add Customer\">

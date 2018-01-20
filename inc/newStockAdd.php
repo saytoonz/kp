@@ -21,11 +21,14 @@ $idgrab=$_GET['SERVER'];
 			$itemDifferentiator =$_POST['itemDifferentiator'];
 			$Description =$_POST['Description'];
 			$WAY_BILL =$_POST['WAY_BILL'];
-			$Quantity =$_POST['Quantity'];
+			$Qquantity =$_POST['Quantity'];
 			$Driver_Info =$_POST['Driver_Info'];
 			$Contact =$_POST['Contact'];
 			$destination =$_POST['destination'];
 			$invent_Date =$_POST['invent_Date'];
+			$Damages =$_POST['Damages'];
+
+			$Quantity =$Qquantity-$Damages;
 
 
 			if ($itemName !="" || $itemDifferentiator !="" || $WAY_BILL !="" || $Driver_Info !="" || $destination !="" || $invent_Date !="") {
@@ -84,9 +87,9 @@ $idgrab=$_GET['SERVER'];
 
 
 
-					 mysql_query("INSERT INTO inventories (itemName,itemDifferentiator,Description,WAY_BILL,Quantity,Total,Driver_Info,Contact,destination,invent_Date,EnteryDate,year,month,day,Price_Before_Invent) VALUES ('$itemName','$itemDifferentiator','$Description','$WAY_BILL','$Quantity','$Total','$Driver_Info','$Contact','$destination','$invent_Date','$EnteryDate','$year','$month','$day','$Price_Before_Invent')");
+					 mysql_query("INSERT INTO inventories (itemName,itemDifferentiator,Description,WAY_BILL,Quantity,Total,Driver_Info,Contact,destination,invent_Date,EnteryDate,year,month,day,Price_Before_Invent,Damages ) VALUES ('$itemName','$itemDifferentiator','$Description','$WAY_BILL','$Quantity','$Total','$Driver_Info','$Contact','$destination','$invent_Date','$EnteryDate','$year','$month','$day','$Price_Before_Invent','$Damages')");
 
-					 mysql_query("INSERT INTO salesAndSupplies (branch,itemID,DESCRIPTION,WAY_BILL,QTY,BALANCE,invent_Date) VALUES ('$destination','$id','$Description','$WAY_BILL','$Quantity','$itemBal','$invent_Date')");
+					mysql_query("INSERT INTO salesAndSupplies (branch,itemID,DESCRIPTION,WAY_BILL,QTY,BALANCE,invent_Date) VALUES ('$destination','$id','$Description','$WAY_BILL','$Quantity','$itemBal','$invent_Date')");
 
 					 
 
@@ -172,6 +175,7 @@ $idgrab=$_GET['SERVER'];
 			</select> <br>
 			
 			<input type=\"date\" name=\"invent_Date\" placeholder=\"Date\" value=\"".date("Y-m-d")."\"> <br>
+			<input type=\"text\" name=\"Damages\" placeholder=\"Damages\"> <br>
 	
 
 			<input type=\"submit\" name=\"add_invent\" value=\"Add Stock\">

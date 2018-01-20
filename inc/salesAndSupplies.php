@@ -89,7 +89,7 @@
 		                <div id=\"record_holder\">
 				<form action=\"#\" method=\"POST\">
 
-		                <input type='date' name='date' placeholder='DATE' value=\"$invent_Date\" required='required' style=\"width: 150px;\"><input type='text' name='DESCRIPTION' placeholder='DESCRIPTION' value=\"$DESCRIPTION\"  required=\"required\"><input type='text' name='WAY_BILL' value=\"$WAY_BILL\"  placeholder='INVOICE' required=\"required\"><input type='text' name='QTY' value=\"$QTY\"  placeholder='RECEIPT' required=\"required\"><input type='text' name='itemprice1' value=\"$itemPrice\" placeholder='Price Per 1'><br><br>
+		                <input type='date' name='date' placeholder='DATE' value=\"$invent_Date\" required='required' style=\"width: 150px;\"><input type='text' name='DESCRIPTION' placeholder='DESCRIPTION' value=\"$DESCRIPTION\"  required=\"required\"><input type='text' name='WAY_BILL' value=\"$WAY_BILL\"  placeholder='INVOICE' required=\"required\"><input type='text' name='QTY' value=\"$QTY\"  placeholder='RECEIPT' required=\"required\"><input type='text' name='itempriceSingle1' value=\"$itemPrice\" placeholder='Price Per 1'><br><br>
 		                    <input type=\"submit\" name=\"Confirm$id\" value=\"Confirm\">
 				</form>
 		                </div>
@@ -136,10 +136,10 @@
 						$DESCRIPTION = $_POST['DESCRIPTION'];
 						$WAY_BILL = $_POST['WAY_BILL'];
 						$QTY = $_POST['QTY'];
-						$itemprice1 = $_POST['itemprice1'];
+						$itemprice1 = $_POST['itempriceSingle1'];
 
 
-						$COST_PRICE = $itemPrice*$QTY;
+						$COST_PRICE = $itemprice1*$QTY;
 
 						$today = date("Y-m-d");
 

@@ -42,7 +42,15 @@ elseif (strpos($Get, "customerinfoViewInfo")!==false) {
 					$tel=$grab['tel'];
 					$address=$grab['address'];
 					$Folio=$grab['Folio'];
-					$active=$grab['active'];
+                    $active=$grab['active'];
+					$Branch=$grab['branch'];
+
+
+                    $qquery = mysql_query("SELECT * FROM braches WHERE id='$Branch' AND active='yes'");
+                        $fet=mysql_fetch_assoc($qquery);
+                        $branchName1=$fet['branchName'];
+                        $Location1=$fet['Location'];
+
 
 					if ($active=="yes") {
 						$status="Active";
@@ -158,6 +166,17 @@ elseif (strpos($Get, "customerinfoViewInfo")!==false) {
                     $address
                 </td>
             </tr>
+
+            
+            <tr class=\"item\">
+                <td>
+                    Branch Belonged
+                </td>
+                
+                <td>
+                    $branchName1 ($Location1)
+                </td>
+            </tr>
             
         </table>
         <br><br>
@@ -203,7 +222,7 @@ elseif (strpos($Get, "customerinfoViewInfo")!==false) {
 			}
 
 		echo "		<center>
-			<h2>$Customername ($Companyname)</h2>
+			<h2 style=\"color: #646464;\">$Customername ($Companyname)</h2>
 			<ul id=\"myUL\" style=\"margin-top: 40px; width: 400px;\">
 				<li><a href=\"home.php?SERVER=customerinfoViewInfo$customer_id\">View Information</a></li>
 				";

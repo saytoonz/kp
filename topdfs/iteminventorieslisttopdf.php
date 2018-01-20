@@ -33,12 +33,13 @@ $this->SetDrawColor(50,50,100);
    
 $this->Cell(20,5,'DATE',1,0,'C',true);
 $this->Cell(47,10,'DESCRIPTION',1,0,'C',true);
-$this->Cell(47,10,'WAY BILL NO.',1,0,'C',true);
+$this->Cell(30,10,'WAY BILL NO.',1,0,'C',true);
 $this->Cell(18,10,'QUANTITY',1,0,'C',true);
+$this->Cell(18,10,'DAMAGES',1,0,'C',true);
 $this->Cell(17,10,'TOTAL',1,0,'C',true);
 $this->Cell(35,10,'DRIVER INFO',1,0,'C',true);
 $this->Cell(45,10,'CONTACTS',1,0,'C',true);
-$this->Cell(52,10,'DESTINATION',1,0,'C',true);
+$this->Cell(48,10,'DESTINATION',1,0,'C',true);
 $this->Cell(0,5,'',0,1);
 
 
@@ -75,9 +76,11 @@ $itemName=$get['itemName'];
 $differentiator=$get['differentiator'];
 
 $tQuantity="";
+$tDamages="";
 $query=mysql_query("SELECT * FROM inventories WHERE itemName='$itemName' AND itemDifferentiator='$differentiator' AND active='yes'  ORDER BY invent_Date ASC");
 while ($data=mysql_fetch_array($query)) {
   $tQuantity+=$data['Quantity'];
+  $tDamages+=$data['Damages'];
   $destination=$data['destination'];
 
     $qq = mysql_query("SELECT * FROM braches WHERE id='$destination' AND active='yes'");
@@ -85,21 +88,23 @@ while ($data=mysql_fetch_array($query)) {
       $branchName=$grab['branchName'];
       $Location=$grab['Location'];
 
-      $desti="$branchName - $Location";
+      $desti="$branchName";
 
     $pdf->Cell(20,10,$data['invent_Date'],1,0,'C');
     $pdf->Cell(47,10,$data['Description'],1,0,'C');
-    $pdf->Cell(47,10,$data['WAY_BILL'],1,0,'C');
+    $pdf->Cell(30,10,$data['WAY_BILL'],1,0,'C');
     $pdf->Cell(18,10,$data['Quantity'],1,0,'C');
+    $pdf->Cell(18,10,$data['Damages'],1,0,'C');
     $pdf->Cell(17,10,$data['Total'],1,0,'C');
     $pdf->Cell(35,10,$data['Driver_Info'],1,0,'C');
     $pdf->Cell(45,10,$data['Contact'],1,0,'C');
-    $pdf->Cell(52,10,$desti,1,1,'C');
+    $pdf->Cell(48,10,$desti,1,1,'C');
 
 }
 
 $pdf->setFont('Arial','B',11);
-$pdf->Cell(114,10,'Total',1,0);
+$pdf->Cell(97,10,'Total',1,0);
 $pdf->Cell(18,10,$tQuantity,1,0,'C');
+$pdf->Cell(18,10,$tDamages,1,0,'C');
 $pdf->Output();
 ?>

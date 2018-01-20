@@ -20,7 +20,11 @@ $query = mysql_query("SELECT * FROM braches WHERE active='yes'");
 			$Contact=$while['Contact'];
 
 			$var.="<ul id=\"myUL\" style=\"width: 100%; text-align: left;\">
-						<li style=\"padding-left: 27px;\"><a>$branchName  &nbsp; &nbsp; &ndash;  &nbsp; &nbsp; $Location  <span style=\"float: right; font-size: 12px;color: red; cursor: pointer;\"> &nbsp;&nbsp; <span onclick=\"document.getElementById('eDITbRANCH$id').style.display='block';\">Edit</span>  &nbsp;&nbsp; <span onclick=\"document.getElementById('_deling_back2$id').style.display='block';\">Del</span></span><span style=\"float: right; \">$Contact &nbsp;  &nbsp; &nbsp;  &nbsp;</span></a></li>
+						<li style=\"padding-left: 27px;\"><a>$branchName  &nbsp; &nbsp; &ndash;  &nbsp; &nbsp; $Location  <span style=\"float: right; font-size: 12px;color: red; cursor: pointer;\"> &nbsp;&nbsp; 
+						<span onclick=\"document.getElementById('eDITbRANCH$id').style.display='block';\">Edit</span>  &nbsp;&nbsp; 
+						<span onclick=\"document.getElementById('_deling_back2$id').style.display='block';\">Del</span></span>
+						<span onclick=\"window.open('topdfs/branchCustomers.php?it=$id','_blank');\" style=\"float: right; font-size: 12px;color: #03b9b9; cursor: pointer;\">Customers &nbsp;  &nbsp; &nbsp;  &nbsp;</span>
+						<span style=\"float: right; \">$Contact &nbsp;  &nbsp; &nbsp;  &nbsp;</span></a></li>
 					  </ul>
 
 

@@ -96,8 +96,8 @@ CREATE TABLE `customerinfo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=177 DEFAULT CHARSET=latin1;
 
 INSERT INTO `customerinfo` (`id`, `Customername`, `Companyname`, `mobile`, `tel`, `address`, `Folio`, `debt`, `active`) VALUES
-(1, 'KESSBEN', 'KESSBEN GROUP OF CO.', '0248469641', '0205110001', '', '0261/12', '', 'yes'),
-(2, 'MAAME BUCKMAN', 'MAAME BUCKMAN ENT', '0242-32 97 95', '', '', '', '', 'yes'),
+(1, 'KESSBEN', 'KESSBEN', '0248469641', '0205110001', '', '0261/12', '', 'yes'),
+(2, 'MAAME BUCKMAN', 'MAAME BUCKMAN ENT', '0242329795', '', '', '', '', 'yes'),
 (3, 'REV ', 'REV OSEI BONSU', '0244209135', '', 'ATWIMA DENCHEMOUSO', '0371/15', '', 'no'),
 (4, ' MAAME BIRAGO', 'MAAME BIRAGO ENT', '0', '', '', '', '', 'yes'),
 (5, 'FRANK ACHEAMPONG', 'FRANK ACHEAMPONG', '0208 59 10 94', '', '', '219/17', '', 'yes'),
@@ -306,7 +306,7 @@ CREATE TABLE `dbmanager` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `dbmanager` (`id`, `dateGiven`, `Alert1`, `Alert2`, `Alert3`, `Alert4`, `Alert5`, `dateEnding`, `DoneWithPeriod`) VALUES
-(1, '2017-12-02', '', '2017-12-06', '2017-12-06', '2017-12-06', '2017-12-05', '2018-12-25', 'no');
+(1, '2018-01-11', '2018-02-15', '2018-02-16', '2018-02-17', '2018-02-18', '2018-02-19', '2018-02-20', 'no');
 
 -- Table `inventories` --
 CREATE TABLE `inventories` (
@@ -321,6 +321,7 @@ CREATE TABLE `inventories` (
   `Contact` text NOT NULL,
   `destination` text NOT NULL,
   `invent_Date` text NOT NULL,
+  `Damages` text NOT NULL,
   `year` text NOT NULL,
   `month` text NOT NULL,
   `day` text NOT NULL,
@@ -328,7 +329,10 @@ CREATE TABLE `inventories` (
   `Price_Before_Invent` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+INSERT INTO `inventories` (`id`, `itemName`, `itemDifferentiator`, `Description`, `WAY_BILL`, `Quantity`, `Total`, `Driver_Info`, `Contact`, `destination`, `invent_Date`, `Damages`, `year`, `month`, `day`, `EnteryDate`, `Price_Before_Invent`, `active`) VALUES
+(1, 'CEMENT', 'DIAMOD 32.5', 'WG2001A', '000223', '800', '800', 'Asumadu', '0240000330', '2', '2018-01-18', '50', '2018', '01', '18', '18th January, 2018', '27.50', 'yes');
 
 -- Table `items` --
 CREATE TABLE `items` (
@@ -340,33 +344,60 @@ CREATE TABLE `items` (
   `date_added` text NOT NULL,
   `active` varchar(3) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
 
 INSERT INTO `items` (`id`, `itemName`, `differentiator`, `itemPrice`, `quantity`, `date_added`, `active`) VALUES
-(1, 'CEMENT', 'GHACEM', '29.50', '', '17th January, 2018', 'yes'),
-(2, 'CEMENT', 'DMD 32.5', '27.50', '', '17th January, 2018', 'yes'),
-(3, 'IRON ROD', '5.5mm', '4.00', '', '17th January, 2018', 'yes'),
-(4, 'CEMENT', 'DMD 42.5', '29.00', '', '17th January, 2018', 'yes'),
-(5, 'IRON ROD', '8mm', '5.50', '', '17th January, 2018', 'yes'),
-(6, 'CEMENT', 'DGT', '30.50', '', '17th January, 2018', 'yes'),
-(7, 'IRON ROD', '9mm', '13.00', '', '17th January, 2018', 'yes'),
+(1, 'CEMENT', 'GHACEM', '29.00', '312', '17th January, 2018', 'yes'),
+(2, 'CEMENT', 'DIAMOD 32.5', '27.50', '304', '17th January, 2018', 'yes'),
+(3, 'IRON ROD', '5.5mm', '4.00', '25', '17th January, 2018', 'yes'),
+(4, 'CEMENT', 'DIAMOD 42.5', '29.00', '', '17th January, 2018', 'yes'),
+(5, 'IRON ROD', '8mm', '5.50', '11522', '17th January, 2018', 'yes'),
+(6, 'CEMENT', 'DANGOTE', '29.00', '10', '17th January, 2018', 'yes'),
+(7, 'IRON ROD', '9mm', '13.00', '344', '17th January, 2018', 'yes'),
 (8, 'CEMENT', 'SOL', '28.00', '', '17th January, 2018', 'yes'),
-(9, 'IRON ROD', '10mm', '14.5', '', '17th January, 2018', 'yes'),
-(10, 'CEMENT', 'WP', '26.50', '', '17th January, 2018', 'yes'),
-(11, 'IRON ROD', '11.5mm', '17.50', '', '17th January, 2018', 'yes'),
-(12, 'CEMENT', 'CMF 32.5', '28.00', '', '17th January, 2018', 'yes'),
-(13, 'CEMENT', 'CMF 42.5', '29.00', '', '17th January, 2018', 'yes'),
-(14, 'IRON ROD', '12mm', '21.00', '', '17th January, 2018', 'yes'),
-(15, 'IRON ROD', '14mm', '27.50', '', '17th January, 2018', 'yes'),
-(16, 'IRON ROD', '16mm', '37.5', '', '17th January, 2018', 'yes'),
-(17, 'HIGH TENSILE IRON ROD', '8mm H/T', '25.50', '', '17th January, 2018', 'yes'),
-(18, 'IRON ROD', '18mm', '53.00', '', '17th January, 2018', 'yes'),
-(19, 'HIGH TENSILE IRON ROD', '10mm H/T', '29.50', '', '17th January, 2018', 'yes'),
-(20, 'IRON ROD', '20mm', '60.00', '', '17th January, 2018', 'yes'),
-(21, 'HIGH TENSILE IRON ROD', '12mm H/T', '43.00', '', '17th January, 2018', 'yes'),
-(22, 'IRON ROD', '25mm', '150.00', '', '17th January, 2018', 'yes'),
-(23, 'HIGH TENSILE IRON ROD', '16mm H/T', '70.00', '', '17th January, 2018', 'yes'),
-(24, 'HIGH TENSILE IRON ROD', '20mm H/T', '106.00', '', '17th January, 2018', 'yes');
+(9, 'IRON ROD', '10mm', '14.5', '2822', '17th January, 2018', 'yes'),
+(10, 'CEMENT', 'WP', '27.00', '76', '17th January, 2018', 'yes'),
+(11, 'IRON ROD', '11.5mm', '17.50', '11991', '17th January, 2018', 'yes'),
+(12, 'CEMENT', 'CIMAF 32.5', '29.00', '22', '17th January, 2018', 'yes'),
+(13, 'CEMENT', 'CIMAF 42.5', '29.00', '', '17th January, 2018', 'yes'),
+(14, 'IRON ROD', '12mm', '21.00', '6602', '17th January, 2018', 'yes'),
+(15, 'IRON ROD', '14mm', '27.50', '6061', '17th January, 2018', 'yes'),
+(16, 'IRON ROD', '16mm', '37.5', '6346', '17th January, 2018', 'yes'),
+(17, 'HIGH TENSILE IRON ROD', '8mm', '19.00', '1004', '17th January, 2018', 'yes'),
+(18, 'IRON ROD', '18mm', '53.00', '30', '17th January, 2018', 'yes'),
+(19, 'HIGH TENSILE IRON ROD', '10mm', '29.50', '785', '17th January, 2018', 'yes'),
+(20, 'IRON ROD', '20mm', '60.00', '145', '17th January, 2018', 'yes'),
+(21, 'HIGH TENSILE IRON ROD', '12mm', '43.00', '138', '17th January, 2018', 'yes'),
+(22, 'IRON ROD', '25mm', '150.00', '167', '17th January, 2018', 'yes'),
+(23, 'HIGH TENSILE IRON ROD', '16mm', '70.00', '653', '17th January, 2018', 'yes'),
+(24, 'HIGH TENSILE IRON ROD', '20mm', '107.00', '314', '17th January, 2018', 'yes'),
+(25, 'CEMENT', 'SAFE', '27.00', '', '17th January, 2018', 'yes'),
+(26, 'BINDING WIRE', '10KG', '45.00', '', '17th January, 2018', 'yes'),
+(27, 'NAILS', '2 INCHES 10KG', '44.00', '', '17th January, 2018', 'yes'),
+(28, 'NAILS', '3 INCHES 10KG', '44.00', '', '17th January, 2018', 'yes'),
+(29, 'NAILS', '4 INCHES 10KG', '44.00', '', '17th January, 2018', 'yes'),
+(30, 'NAILS', '5 INCHES 10KG', '44.00', '', '17th January, 2018', 'yes'),
+(31, 'NAILS', '1.5 INCHES 10KG', '50.00', '', '17th January, 2018', 'yes'),
+(32, 'NAILS', '1 INCHES 10KG', '50.00', '', '17th January, 2018', 'yes'),
+(33, 'NAILS', 'ROOFING', '20.00', '', '17th January, 2018', 'yes'),
+(34, 'NAILS', '2.5 INCHES 10KG', '44.00', '', '17th January, 2018', 'yes'),
+(35, 'ROOFING SHEET', 'GALV STAR', '300.00', '', '17th January, 2018', 'yes'),
+(36, 'ROOFING SHEET', 'GALV (COATED)', '380.00', '', '17th January, 2018', 'yes'),
+(37, 'ROOFING SHEET', 'ALUZINC', '450.00', '', '17th January, 2018', 'yes'),
+(38, 'ROOFING SHEET', 'IBR (COATED)', '570.00', '', '17th January, 2018', 'yes'),
+(39, 'ROOFING SHEET', 'IBR (EMBORS)', '580.00', '', '17th January, 2018', 'yes'),
+(40, 'MESH FLAT', '4mm BRC', '110.00', '', '17th January, 2018', 'yes'),
+(41, 'MESH FLAT', '5mm BRC', '120.00', '', '17th January, 2018', 'yes'),
+(42, 'MESH FLAT', '6mm BRC', '160.00', '', '17th January, 2018', 'yes'),
+(43, 'MESH COIL', '4mm BRC', '850.00', '', '17th January, 2018', 'yes'),
+(44, 'MESH COIL', '5mm BRC', '1100.00', '', '17th January, 2018', 'yes'),
+(45, 'MESH COIL', '6mm BRC', '1200.00', '', '17th January, 2018', 'yes'),
+(46, 'IRON ROD', '32mm', '200.00', '', '17th January, 2018', 'yes'),
+(47, 'IRON ROD', '9mm x 12M (40ft)', '16.00', '', '17th January, 2018', 'yes'),
+(48, 'IRON ROD', '12STD x 12m', '36.00', '', '17th January, 2018', 'yes'),
+(49, 'HIGH TENSILE IRON ROD', '9mm', '19.50', '', '17th January, 2018', 'yes'),
+(50, 'HIGH TENSILE IRON ROD', '25mm', '175.00', '', '17th January, 2018', 'yes'),
+(51, 'HIGH TENSILE IRON ROD', '32mm', '200.00', '', '17th January, 2018', 'yes');
 
 -- Table `onlineupdate` --
 CREATE TABLE `onlineupdate` (
@@ -377,7 +408,7 @@ CREATE TABLE `onlineupdate` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `onlineupdate` (`id`, `dated`, `seconds`) VALUES
-(1, '9h January, 2018', '31');
+(1, '9h January, 2018', '48');
 
 -- Table `salesandsupplies` --
 CREATE TABLE `salesandsupplies` (
@@ -409,7 +440,7 @@ CREATE TABLE `theme` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `theme` (`id`, `themes`) VALUES
-(1, 'other_side_all');
+(1, 'other_Side_all_dark');
 
 -- Table `users` --
 CREATE TABLE `users` (
@@ -427,12 +458,8 @@ CREATE TABLE `users` (
   `login` varchar(3) NOT NULL DEFAULT 'no',
   `last_entry` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`id`, `user_id`, `fullname`, `username`, `password`, `mobile`, `tel`, `email`, `address`, `add_date`, `active`, `login`, `last_entry`) VALUES
-(0, 'ADMINISTRATOR', 'ADMINISTRATOR', 'adminns', '319f4d26e3c536b5dd871bb2c52e3178', '', '', '', '', '2018-01-17 07:53:50', 'yes', 'no', '17th January, 2018 - 6:53 AM'),
-(1, 'AN455', 'Say Nana Yaw Samuel', 'say', '319f4d26e3c536b5dd871bb2c52e3178', '0240066392', '', '', 'F22/1 GAB', '2018-01-17 09:25:06', 'yes', 'yes', '17th January, 2018 -  8:25 AM'),
-(2, 'KPCL1', 'Godson Dacosta', 'ayayay', '3677da84ef8e0675a4ca74280da07a3a', '0240066392', '', '', 'PO 11 POKU', '2018-01-03 19:14:15', 'yes', 'no', ''),
-(3, '123', 'Nana Yaw Dedrick', 'sayt', '202cb962ac59075b964b07152d234b70', '02400663931', '05596854421', 'RASSAY32@GMAIL.COM', 'Gso Her', '2018-01-03 10:12:27', 'yes', 'yes', '3rd January, 2018 -  12:08 AM'),
-(5, 'aaaa;', 'SAY SAY', 'AN488748796', '4baff08d7dda0337125dfa9ea94b1028', '02020202020220', '00000000', 'rassay31@gmail.com', 'GS 44', '2018-01-08 09:36:19', 'yes', 'no', '');
+(1, 'ADMINISTRATOR', 'ADMINISTRATOR', 'KPCL', '319f4d26e3c536b5dd871bb2c52e3178', '0240066392', '', '', 'F22/1 GAB', '2018-01-17 17:13:25', 'yes', 'no', '17th January, 2018 - 4:13 PM');
 
